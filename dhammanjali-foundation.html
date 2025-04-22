@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Hope Foundation - Transforming Lives Globally</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        :root {
+            --primary-color: #c3a478;
+            --text-color: orange;
+            --hover-color: #a0875f;
+        }
+
+        body, .stock-bar, .navbar, .dropdown-menu, .modal-content,
+        .nav-link, .dropdown-toggle, .dropdown-item, h6, p, a,
+        .list-group-item, .contact-option, .modal-title { 
+            color: orange !important;
+        }
+
+        /* Stock Bar Styling */
+        .stock-bar {
+            background-color: #f8f9fa;
+            border-bottom: 1px solid #e9ecef;
+            padding: 10px 40px;
+            font-size: 0.875rem;
+        }
+
+        .nav-link {
+            font-weight: bold;
+            color: orange
+        }
+
+        .stock-bar a {
+            color: orange;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .stock-bar a:hover {
+            color: var(--hover-color);
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 15px 0;
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-brand img {
+            height: 90px;
+        }
+
+        .navbar-brand span {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        /* Dropdown Mega Menu Styling */
+        @media (min-width: 992px) {
+            .dropdown-mega-menu {
+                position: static;
+            }
+
+            .dropdown-mega-menu .dropdown-menu {
+                width: 100%;
+                left: 0;
+                right: 0;
+                margin-top: 10px;
+                border: none;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+                padding: 20px;
+                display: flex;
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(10px);
+                transition: all 0.3s ease;
+                justify-content: center;
+            }
+
+            .dropdown-mega-menu:hover .dropdown-menu {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+
+            .dropdown-mega-menu .dropdown-menu .col {
+                flex: 0 0 auto;
+                width: auto;
+                padding: 0 15px;
+                max-width: 250px;
+            }
+
+            .dropdown-mega-menu .dropdown-menu h6 {
+                color: orange;
+                margin-bottom: 15px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: color 0.3s ease;
+            }
+
+            .dropdown-mega-menu .dropdown-menu h6:hover {
+                color: var(--hover-color);
+            }
+
+            .dropdown-mega-menu .dropdown-menu a {
+                color: orange;
+                text-decoration: none;
+                display: block;
+                padding: 5px 0;
+                transition: color 0.3s ease;
+            }
+
+            .dropdown-mega-menu .dropdown-menu a:hover {
+                color: var(--primary-color);
+                padding-left: 5px;
+            }
+        }
+
+        /* Mobile menu styling - FIXED THE LINE ISSUE */
+        @media (max-width: 991px) {
+            .navbar-collapse {
+                background-color: white;
+                padding: 20px;
+                margin-top: 10px;
+                border-radius: 5px;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            .dropdown-menu {
+                margin-left: 20px;
+                border-left: 2px solid orange;
+                background: transparent;
+                border: none;
+                padding: 0;
+            }
+            
+            /* FIX: Remove the line below text in mobile dropdown */
+            .dropdown-toggle::after {
+                display: none !important;
+            }
+            
+            .dropdown-item {
+                padding: 8px 15px;
+                border-bottom: none;
+            }
+            
+            .dropdown-item:hover {
+                background-color: rgba(255, 165, 0, 0.1);
+            }
+            
+            /* Better spacing for mobile dropdowns */
+            .nav-item.dropdown {
+                margin-bottom: 10px;
+            }
+        }
+
+        /* Search Modal Styling */
+        #searchModal .modal-content {
+            border-radius: 10px;
+        }
+
+        #searchModal .modal-header {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        #searchModal .form-control {
+            border: none;
+            border-bottom: 2px solid orange;
+            border-radius: 0;
+            font-size: 1.2rem;
+            padding: 10px 0;
+            color: orange;
+        }
+
+        #searchModal .form-control:focus {
+            box-shadow: none;
+            border-color: orange;
+        }
+
+        #searchModal .form-control::placeholder {
+            color: orange;
+            opacity: 0.7;
+        }
+
+        #searchResults {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        #searchResults .list-group-item {
+            transition: all 0.3s ease;
+        }
+
+        #searchResults .list-group-item:hover {
+            background-color: rgba(255, 165, 0, 0.1);
+            color: orange;
+        }
+
+        /* Support Modal Styling */
+        #supportModal .modal-content {
+            border-radius: 10px;
+        }
+
+        #supportModal .contact-option {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        #supportModal .contact-option:hover {
+            background-color: rgba(255, 165, 0, 0.1);
+            transform: translateY(-5px);
+        }
+
+        /* Nav Icons Styling */
+        .nav-icons {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            color: orange;
+            transition: all 0.3s ease;
+            margin-left: 10px;
+        }
+
+        .nav-icons a:hover {
+            background-color: rgba(255, 165, 0, 0.1);
+            color: orange;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 991px) {
+            .stock-bar {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .stock-bar > div {
+                margin: 5px 0;
+            }
+
+            .navbar-toggler {
+                border: none;
+            }
+
+            .navbar-toggler-icon {
+                background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='orange' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+            }
+        }
+
+        /* Success text color override */
+        .text-success {
+            color: orange !important;
+        }
+
+        /* Button close color */
+        .btn-close {
+            filter: invert(0.5) sepia(1) saturate(5) hue-rotate(0deg);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-quote {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .hero-quote blockquote {
+            font-style: italic;
+            font-size: 1.2rem;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #2575fc;
+            margin-bottom: 50px;
+        }
+
+        /* Strategic Approach */
+        .strategy-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .strategy-item {
+            background: #f4f4f4;
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .strategy-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .strategy-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        .strategy-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #2575fc;
+        }
+
+        .strategy-description {
+            color: #666;
+        }
+
+        /* Impact Areas */
+        .impact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .impact-column {
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .impact-title {
+            font-size: 2rem;
+            color: #2575fc;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .impact-list {
+            list-style-type: disc;
+            padding-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        /* Global Presence */
+        .global-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+
+        .global-item {
+            background: #f4f4f4;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .global-number {
+            font-size: 3rem;
+            color: #2575fc;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .global-label {
+            color: #666;
+        }
+
+        /* Partnerships */
+        .partnerships-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .partnership-item {
+            background: #f4f4f4;
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .partnership-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .partnership-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        .partnership-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #2575fc;
+        }
+
+        .partnership-description {
+            color: #666;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .strategy-grid,
+            .impact-grid,
+            .global-grid,
+            .partnerships-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+        }
+        .footer-container {
+            background-color: #fff;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .subscribe-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid orange;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+        }
+        .subscribe-form {
+            width: 100%;
+            max-width: 500px;
+        }
+        .subscribe-form label {
+            font-weight: 600;
+            color: orange;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .form-container {
+            display: flex;
+            border: 1px solid orange;
+            border-radius: 4px;
+            overflow: hidden;
+            background-color: #faf8f8;
+        }
+        .subscribe-form input {
+            flex-grow: 1;
+            padding: 10px 15px;
+            border: none;
+            outline: none;
+            color: orange;
+        }
+        .subscribe-form input::placeholder {
+            color: orange;
+            opacity: 0.7;
+        }
+        .subscribe-form button {
+            padding: 10px 20px;
+            border: none;
+            background-color: orange;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .subscribe-form button:hover {
+            background-color: #a77c2c;
+        }
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+        .social-icons a {
+            text-decoration: none;
+            background-color: orange;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s;
+        }
+        .social-icons a:hover {
+            background-color: #a77c2c;
+        }
+        .social-icons a img {
+            max-width: 20px;
+            max-height: 20px;
+            filter: brightness(0) invert(1);
+        }
+        .footer-links {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            padding-bottom: 30px;
+        }
+        .footer-links div {
+            display: flex;
+            flex-direction: column;
+        }
+        .footer-links h4 {
+            color: orange;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        .footer-links h4 a {
+            color: orange;
+        }
+        .footer-links a {
+            text-decoration: none;
+            color: orange;
+            font-size: 14px;
+            margin-bottom: 8px;
+            transition: color 0.3s;
+        }
+        .footer-links a:hover {
+            color: #a77c2c;
+        }
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 20px;
+            border-top: 1px solid orange;
+            font-size: 14px;
+            color: orange;
+        }
+        .footer-bottom a {
+            text-decoration: none;
+            color: orange;
+            margin-left: 15px;
+            transition: color 0.3s;
+        }
+        .footer-bottom a:hover {
+            color: orange;
+        }
+        .footer-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+        }
+        .footer-logo img {
+            max-width: 200px;
+            height: auto;
+            filter: hue-rotate(0deg) saturate(5) brightness(0.8);
+        }
+
+        @media screen and (max-width: 768px) {
+            .footer-container {
+                padding: 20px;
+            }
+            .subscribe-section {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+            .footer-links {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer-bottom div {
+                margin-top: 10px;
+            }
+            .social-icons {
+                width: 100%;
+                justify-content: flex-start;
+                margin-top: 15px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .footer-links {
+                grid-template-columns: 1fr;
+            }
+            .form-container {
+                flex-direction: column;
+            }
+            .subscribe-form button {
+                width: 100%;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="stock-bar d-flex justify-content-between align-items-center">
+    
+        <div>
+            <a href="/P-pages/index/contact.html">Contact Us</a> 
+        </div>
+    </div>
+
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <img src="/assets/dhammalogo.png" alt="Logo">
+        </div>
+
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="about.html" class="nav-link">About</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link">Business <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-menu">
+                    <a href="mart.html" class="dropdown-item"><i
+                            class="fas fa-chart-line"></i>Mart</a>
+                    <a href="cafe.html" class="dropdown-item"><i
+                            class="fas fa-coins"></i>Cafe</a>
+                    <a href="real.html" class="dropdown-item"><i
+                            class="fas fa-search-dollar"></i>Real Estate</a>
+                    <a href="medical.html" class="dropdown-item"><i class="fas fa-laptop-code"></i>Medical
+                        Devices</a>
+                    <a href="charity.html" class="dropdown-item"><i class="fas fa-cogs"></i>Charity</a>
+                    <a href="index.html" class="dropdown-item"><i
+                            class="fas fa-shield-alt"></i>Dhammanjali Foundation</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a href="gallery.html" class="nav-link">Gallery</a>
+            </li>
+            <li class="nav-item">
+                <a href="testomonials.html" class="nav-link">Testimonials</a>
+            </li>
+            <li class="nav-item">
+                <a href="contact.html" class="nav-link">Contact Us</a>
+            </li>
+
+            <!-- Mobile account button -->
+            <div class="account-container mobile-account">
+                <button class="account-btn">
+                    <i class="fas fa-user-circle"></i>
+                    Account
+                </button>
+            </div>
+        </ul>
+
+        <!-- Desktop account button -->
+        <button class="account-btn desktop-account">
+            <i class="fas fa-user-circle"></i>Account
+        </button>
+
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </div>
+</nav>
+
+<!-- Search Modal -->
+<div class="modal fade" id="searchModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <input type="text" id="searchInput" class="form-control" placeholder="Search Reliance...">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="searchResults" class="list-group">
+                    <!-- Dynamic search results will be populated here -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Support Modal -->
+<div class="modal fade" id="supportModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Support & Contact</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="contact-option text-center" data-type="phone">
+                            <i class="fas fa-phone fa-3x mb-3"></i>
+                            <h6>Call Us</h6>
+                            <p>1800-123-4567</p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="contact-option text-center" data-type="email">
+                            <i class="fas fa-envelope fa-3x mb-3"></i>
+                            <h6>Email Support</h6>
+                            <p>support@reliance.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <h6>Customer Support Hours</h6>
+                    <p>Monday - Saturday: 9 AM to 6 PM</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const searchInput = document.getElementById('searchInput');
+        const searchResults = document.getElementById('searchResults');
+
+        // Sample search data
+        const searchData = [
+            { title: 'About Reliance', link: '#about' },
+            { title: 'Investor Relations', link: '#investors' },
+            { title: 'Sustainability Initiatives', link: '#sustainability' },
+            { title: 'Careers at Reliance', link: '#careers' },
+            { title: 'Digital Services', link: '#digital-services' },
+            { title: 'Energy Business', link: '#energy' }
+        ];
+
+        searchInput.addEventListener('input', function() {
+            const query = this.value.toLowerCase();
+            const filteredResults = searchData.filter(item => 
+                item.title.toLowerCase().includes(query)
+            );
+
+            searchResults.innerHTML = filteredResults.map(result => 
+                `<a href="${result.link}" class="list-group-item list-group-item-action">
+                    ${result.title}
+                </a>`
+            ).join('') || '<p class="list-group-item">No results found</p>';
+        });
+
+        // Contact option click handler
+        document.querySelectorAll('.contact-option').forEach(option => {
+            option.addEventListener('click', function() {
+                const type = this.getAttribute('data-type');
+                if (type === 'phone') {
+                    window.location.href = 'tel:18001234567';
+                } else if (type === 'email') {
+                    window.location.href = 'mailto:support@reliance.com';
+                }
+            });
+        });
+
+        // Add click handler for dropdown headings
+        document.querySelectorAll('.dropdown-menu h6').forEach(heading => {
+            heading.addEventListener('click', function() {
+                // Find the first link under this heading and navigate to it
+                const firstLink = this.nextElementSibling;
+                if (firstLink && firstLink.getAttribute('href')) {
+                    window.location.href = firstLink.getAttribute('href');
+                }
+            });
+        });
+    });
+</script>
+    <!-- Hero Section -->
+    <header id="hero" class="hero">
+        <div class="container">
+            <h1 class="hero-title">Dhammanjali Foundation</h1>
+            <p class="hero-subtitle">
+                Catalyzing Sustainable Development, Empowering Communities, and Creating Lasting Social Transformation Across Global Landscapes
+            </p>
+            <div class="hero-quote">
+                <blockquote>
+                    "Hope is not a mere emotion, but a strategic approach to solving complex social challenges."
+                </blockquote>
+            </div>
+        </div>
+    </header>
+
+    <!-- Strategic Approach Section -->
+    <section id="strategic-approach" class="section">
+        <div class="container">
+            <h2 class="section-title">Our Comprehensive Strategy</h2>
+            <div class="strategy-grid">
+                <div class="strategy-item">
+                    <div class="strategy-icon">📊</div>
+                    <h3 class="strategy-subtitle">Strategic Planning</h3>
+                    <p class="strategy-description">
+                        We develop meticulously researched, data-driven intervention strategies that address root causes of social inequalities through comprehensive needs assessments and long-term planning.
+                    </p>
+                </div>
+                <div class="strategy-item">
+                    <div class="strategy-icon">🤲</div>
+                    <h3 class="strategy-subtitle">Community Engagement</h3>
+                    <p class="strategy-description">
+                        Our approach prioritizes deep community involvement, ensuring local stakeholders are active participants in designing, implementing, and sustaining development initiatives.
+                    </p>
+                </div>
+                <div class="strategy-item">
+                    <div class="strategy-icon">🔄</div>
+                    <h3 class="strategy-subtitle">Continuous Evaluation</h3>
+                    <p class="strategy-description">
+                        We implement rigorous monitoring and evaluation frameworks to measure impact, learn continuously, and adapt our strategies for maximum effectiveness and scalability.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Presence Section -->
+    <section id="global-presence" class="section">
+        <div class="container">
+            <h2 class="section-title">Our Global Footprint</h2>
+            <div class="global-grid">
+                <div class="global-item">
+                    <div class="global-number">12</div>
+                    <div class="global-label">Countries</div>
+                </div>
+                <div class="global-item">
+                    <div class="global-number">75+</div>
+                    <div class="global-label">Communities</div>
+                </div>
+                <div class="global-item">
+                    <div class="global-number">150K+</div>
+                    <div class="global-label">Lives Impacted</div>
+                </div>
+                <div class="global-item">
+                    <div class="global-number">40</div>
+                    <div class="global-label">Active Projects</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partnerships Section -->
+    <section id="partnerships" class="section">
+        <div class="container">
+            <h2 class="section-title">Strategic Collaborations</h2>
+            <div class="partnerships-grid">
+                <div class="partnership-item">
+                    <div class="partnership-icon">🏫</div>
+                    <h3 class="partnership-title">Academic Institutions</h3>
+                    <p class="partnership-description">
+                        Partnering with universities to develop research-driven, innovative social solutions.
+                    </p>
+                </div>
+                <div class="partnership-item">
+                    <div class="partnership-icon">🏢</div>
+                    <h3 class="partnership-title">Corporate Partners</h3>
+                    <p class="partnership-description">
+                        Collaborating with socially responsible corporations to scale impact and create sustainable change.
+                    </p>
+                </div>
+                <div class="partnership-item">
+                    <div class="partnership-icon">🌐</div>
+                    <h3 class="partnership-title">International Organizations</h3>
+                    <p class="partnership-description">
+                        Working with global NGOs to address complex social challenges across diverse contexts.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Interactive Elements and Dynamic Content
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate strategy items on hover
+            const strategyItems = document.querySelectorAll('.strategy-item');
+            strategyItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.05)';
+                });
+                item.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+
+            // Dynamic counter animation for global impact numbers
+            const globalNumbers = document.querySelectorAll('.global-number');
+            globalNumbers.forEach(number => {
+                const target = parseInt(number.textContent);
+                let current = 0;
+                
+                const updateNumber = () => {
+                    if (current < target) {
+                        current += Math.ceil(target / 50);
+                        if (current > target) current = target;
+                        number.textContent = current.toLocaleString();
+                        requestAnimationFrame(updateNumber);
+                    }
+                };
+                
+                updateNumber();
+            });
+
+            // Scroll-triggered animations
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fade-in');
+                    }
+                });
+            }, observerOptions);
+
+            // Add intersection observer to sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+
+    <div class="footer-container">
+        <!-- Subscribe & Social Media -->
+        <div class="subscribe-section">
+            <div class="subscribe-form">
+                <label for="email">Subscribe to our news alerts</label>
+                <div class="form-container">
+                    <input type="email" id="email" placeholder="Email Id">
+                    <button>Subscribe</button>
+                </div>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/relianceIndustriestLimited" target="_blank" aria-label="Facebook">
+                    <img src="https://rilstaticasset.akamaized.net/sites/default/files/2022-08/facebook-icon.svg" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/relianceupdates/" target="_blank" aria-label="Instagram">
+                    <img src="https://rilstaticasset.akamaized.net/sites/default/files/2022-11/insta-icon.svg" alt="Instagram">
+                </a>
+                <a href="https://twitter.com/RIL" target="_blank" aria-label="Twitter">
+                    <img src="https://rilstaticasset.akamaized.net/sites/default/files/2023-09/twitter-icon%20%281%29.svg" alt="Twitter">
+                </a>
+                <a href="https://www.linkedin.com/company/reliance" target="_blank" aria-label="LinkedIn">
+                    <img src="https://rilstaticasset.akamaized.net/sites/default/files/2022-08/linkedin-icon.svg" alt="LinkedIn">
+                </a>
+                <a href="https://www.youtube.com/user/flameoftruth2014" target="_blank" aria-label="YouTube">
+                    <img src="https://rilstaticasset.akamaized.net/sites/default/files/2022-08/youtube-icon.svg" alt="YouTube">
+                </a>
+            </div>
+        </div>
+      
+        <!-- Footer Links -->
+        <div class="footer-links">
+            <div>
+                <h4>About</h4>
+                <a href="/DM/about.html">About Us</a>
+                
+            </div>
+            <div>
+                <h4>Businesses</h4>
+                <a class="dropdown-item" href="/bussines section/mart/mart.html">Mart</a>
+                <a class="dropdown-item" href="/bussines section/cafe/cafe.html">Cafe</a>
+                <a class="dropdown-item" href="/bussines section/real estate/real.html">Real Estate</a>
+                <a class="dropdown-item" href="/medical/medical.html">Medical Devices</a>
+                <a class="dropdown-item" href="/charity/charity.html">Charity</a>
+                <a class="dropdown-item" href="/Dhammanjali-Foundation/index.html">Dhammanjali Foundation</a>
+                <!-- <a class="dropdown-item" href="#">Products(Other)</a> -->
+            </div>
+            
+            <div>
+                <h4><a href="/Gallery/gallery.html">Gallery</a></h4>
+                
+            </div>
+            <div>
+                <h4><a href="/testomoni/testomonials.html">Testimonials</a></h4>
+                
+            </div>
+        </div>
+      
+        <!-- Footer Logo -->
+        <div class="footer-logo">
+            <a href="assete/dhammalogo.png" role="reliance-logo">
+                <!-- <img src="https://rilstaticasset.akamaized.net/sites/default/files/2022-09/logo-ft.png" alt="Reliance Industries Limited"> -->
+            </a>
+        </div>
+      
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <span>© 2025 Reliance Industries Limited. All rights reserved.</span>
+            <div>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Legal Notice</a>
+                <a href="#">Report Security Issue</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

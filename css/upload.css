@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    background-color: #343a40;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .upload-box {
+    width: 300px;
+    background: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  img {
+    margin-top: 15px;
+    max-width: 100%;
+  }

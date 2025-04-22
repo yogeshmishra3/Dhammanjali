@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cafe</title>
+    <link rel="stylesheet" href="css/cafe.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/dhammalogo.png" alt="Logo">
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Business <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="mart.html" class="dropdown-item"><i
+                                class="fas fa-chart-line"></i>Mart</a>
+                        <a href="cafe.html" class="dropdown-item"><i
+                                class="fas fa-coins"></i>Cafe</a>
+                        <a href="real.html" class="dropdown-item"><i
+                                class="fas fa-search-dollar"></i>Real Estate</a>
+                        <a href="medical.html" class="dropdown-item"><i class="fas fa-laptop-code"></i>Medical
+                            Devices</a>
+                        <a href="charity.html" class="dropdown-item"><i class="fas fa-cogs"></i>Charity</a>
+                        <a href="index.html" class="dropdown-item"><i
+                                class="fas fa-shield-alt"></i>Dhammanjali Foundation</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="gallery.html" class="nav-link">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="testomonials.html" class="nav-link">Testimonials</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact Us</a>
+                </li>
+
+                <!-- Mobile account button -->
+                <div class="account-container mobile-account">
+                    <button class="account-btn">
+                        <i class="fas fa-user-circle"></i>
+                        Account
+                    </button>
+                </div>
+            </ul>
+
+            <!-- Desktop account button -->
+            <button class="account-btn desktop-account">
+                <i class="fas fa-user-circle"></i>Account
+            </button>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+            const dropdowns = document.querySelectorAll('.dropdown');
+            
+            // Toggle menu
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+                document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+            });
+            
+            // Handle dropdown clicks in mobile view
+            dropdowns.forEach(dropdown => {
+                const link = dropdown.querySelector('.nav-link');
+                
+                link.addEventListener('click', function(e) {
+                    if (window.innerWidth <= 992) {
+                        e.preventDefault();
+                        dropdown.classList.toggle('active');
+                        
+                        // Close other dropdowns
+                        dropdowns.forEach(other => {
+                            if (other !== dropdown) {
+                                other.classList.remove('active');
+                            }
+                        });
+                    }
+                });
+            });
+            
+            // Close menu when clicking a menu item
+            const navLinks = document.querySelectorAll('.nav-item:not(.dropdown) .nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+            
+            // Handle window resize
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 992) {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                    
+                    dropdowns.forEach(dropdown => {
+                        dropdown.classList.remove('active');
+                    });
+                }
+            });
+        });
+    </script>
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide"><img src="assets/wp3478866.jpg" alt="Image 1"></div>
+            <div class="slide"><img src="assets/coffee-cinnamon-1.jpg" alt="Image 2"></div>
+            <div class="slide"><img src="assets/SCRWA-5254-cafe-food.webp" alt="Image 3"></div>
+            <div class="slide"><img src="assets/ush-snw-toadstool-cafe-food-5868.jpg" alt="Image 4"></div>
+            <div class="slide"><img src="assets/pexels-igor-starkov-1307698.jpg" alt="Image 5"></div>
+        </div>
+        <div class="buttons">
+            <button onclick="prevSlide()">&#10094;</button>
+            <button onclick="nextSlide()">&#10095;</button>
+        </div>
+    </div>
+
+    <section class="menu">
+        <h1 class="heading">Our Specialties</h1>
+
+        <div class="menu-list">
+            <div class="menu-item">
+                <img src="assets/pexels-igor-starkov-1307698.jpg" alt="Coffee">
+                <h3>Chocolate Chip Cookies</h3>
+                <p>Rich, aromatic, and freshly brewed.</p>
+            </div>
+            <div class="menu-item">
+                <img src="assets/coffee-cinnamon-1.jpg" alt="Cookies">
+                <h3>Signature Coffee</h3>
+                <p>Voted best in town!</p>
+            </div>
+            <div class="menu-item">
+                <img src="assets/th (10).jpeg" alt="Pastries">
+                <h3>Delicious Pastries</h3>
+                <p>Handmade with love and the finest ingredients.</p>
+            </div>
+            <div class="menu-item">
+                <img src="assets/ice-creame.jpeg" alt="Pastries">
+                <h3>Ice-cream</h3>
+                <p>A perfect treat to cool down and satisfy your sweet cravings</p>
+            </div>
+            <div class="menu-item">
+                <img src="assets/unsplash-image-x00CzBt4Dfk.jpg" alt="Pastries">
+                <h3>Delicious Pizza</h3>
+                <p>Each bite is a blend of crispy, cheesy, and flavorful goodness!</p>
+            </div>
+            <div class="menu-item">
+                <img src="assets/b1f784b787c7fe1a1f404bf030ecedd6.jpg" alt="Pastries">
+                <h3>Delicious Pastries</h3>
+                <p>Served with a spicy dip for the perfect taste.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="testimonial-slider">
+        <div class="testimonial active">
+            <div class="image-content">
+                <img src="assets/professional_headshots_tampa_007.jpg" alt="Testimonial 1">
+            </div>
+            <div class="testimonial-text">
+                <p>"Outstanding coffee in a part of town usually too busy to care"</p>
+                <h4>Jennie Doe</h4>
+                
+            </div>
+        </div>
+        <div class="testimonial">
+            <div class="image-content">
+                <img src="assets/professional_headshots_tampa_011.jpg" alt="Testimonial 2">
+            </div>
+            <div class="testimonial-text">
+                <p>"Best chocolate chip cookie in NYC."</p>
+                <h4>Jane Smith</h4>
+                
+            </div>
+        </div>
+        <div class="testimonial">
+            <div class="image-content">
+                <img src="assets/nlalor-photography-2021-06-17-Jason-Cholewa-Headshot-Web-Sized-1.jpg" alt="Testimonial 3">
+            </div>
+            <div class="testimonial-text">
+                <p>"Abosultely Delicious,one of the best pizza i eat"</p>
+                <h4>Harry potter</h4>
+                
+            </div>
+        </div>
+    </div>
+    <div class="slider-buttons">
+        <button onclick="prevSlide()">&#10094; Prev</button>
+        <button onclick="nextSlide()">Next &#10095;</button>
+    </div>
+
+    <div class="footer-container">
+        <!-- Subscribe & Social Media -->
+        <div class="subscribe-section">
+            <div class="subscribe-form">
+                <label for="email">Subscribe to our news alerts</label>
+                <div class="form-container">
+                    <input type="email" id="email" placeholder="Email Id">
+                    <button>Subscribe</button>
+                </div>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/relianceIndustriestLimited" target="_blank" aria-label="Facebook">
+                    <img src="https://rilstaticasset.akamaized.net/sites/default/files/2022-08/facebook-icon.svg" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/relianceupdates/" target="_blank" aria-label="Instagram">
+                    <img src="https://rilstaticasset.akamaized.net/sites/default/files/2022-11/insta-icon.svg" alt="Instagram">
+                </a>
+                <a href="https://twitter.com/RIL" target="_blank" aria-label="Twitter">
+                    <img src="https://rilstaticasset.akamaized.net/sites/default/files/2023-09/twitter-icon%20%281%29.svg" alt="Twitter">
+                </a>
+                <a href="https://www.linkedin.com/company/reliance" target="_blank" aria-label="LinkedIn">
+                    <img src="https://rilstaticasset.akamaized.net/sites/default/files/2022-08/linkedin-icon.svg" alt="LinkedIn">
+                </a>
+                <a href="https://www.youtube.com/user/flameoftruth2014" target="_blank" aria-label="YouTube">
+                    <img src="https://rilstaticasset.akamaized.net/sites/default/files/2022-08/youtube-icon.svg" alt="YouTube">
+                </a>
+            </div>
+        </div>
+      
+        <!-- Footer Links -->
+        <div class="footer-links">
+            <div>
+                <h4>About</h4>
+                <a href="about.html">About Us</a>
+                
+            </div>
+            <div>
+                <h4>Businesses</h4>
+                <a class="dropdown-item" href="/bussines section/mart/mart.html">Mart</a>
+                <a class="dropdown-item" href="/bussines section/cafe/cafe.html">Cafe</a>
+                <a class="dropdown-item" href="/bussines section/real estate/real.html">Real Estate</a>
+                <a class="dropdown-item" href="/medical/medical.html">Medical Devices</a>
+                <a class="dropdown-item" href="/charity/charity.html">Charity</a>
+                <a class="dropdown-item" href="/Dhammanjali-Foundation/index.html">Dhammanjali Foundation</a>
+                <!-- <a class="dropdown-item" href="#">Products(Other)</a> -->
+            </div>
+            
+            <div>
+                <h4><a href="/Gallery/gallery.html">Gallery</a></h4>
+                
+            </div>
+            <div>
+                <h4><a href="/testomoni/testomonials.html">Testimonials</a></h4>
+                
+            </div>
+        </div>
+      
+        <!-- Footer Logo -->
+        <div class="footer-logo">
+            <a href="assete/dhammalogo.png" role="reliance-logo">
+                <!-- <img src="https://rilstaticasset.akamaized.net/sites/default/files/2022-09/logo-ft.png" alt="Reliance Industries Limited"> -->
+            </a>
+        </div>
+      
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <span>© 2025 Reliance Industries Limited. All rights reserved.</span>
+            <div>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Legal Notice</a>
+                <a href="#">Report Security Issue</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="cafe.js"></script>
+</body>
+</html>
+
+    
+    
+        
+        

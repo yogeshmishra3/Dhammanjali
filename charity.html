@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hope for All - Charity Organization</title>
+    <link rel="stylesheet" href="css/charity.css">
+    <script src="js/charity.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="stock-bar d-flex justify-content-between align-items-center">
+    
+        <div>
+            <a href="/P-pages/index/contact.html">Contact Us</a> 
+        </div>
+    </div>
+
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <img src="/assets/dhammalogo.png" alt="Logo">
+        </div>
+
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="about.html" class="nav-link">About</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link">Business <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-menu">
+                    <a href="mart.html" class="dropdown-item"><i
+                            class="fas fa-chart-line"></i>Mart</a>
+                    <a href="cafe.html" class="dropdown-item"><i
+                            class="fas fa-coins"></i>Cafe</a>
+                    <a href="real.html" class="dropdown-item"><i
+                            class="fas fa-search-dollar"></i>Real Estate</a>
+                    <a href="medical.html" class="dropdown-item"><i class="fas fa-laptop-code"></i>Medical
+                        Devices</a>
+                    <a href="charity.html" class="dropdown-item"><i class="fas fa-cogs"></i>Charity</a>
+                    <a href="index.html" class="dropdown-item"><i
+                            class="fas fa-shield-alt"></i>Dhammanjali Foundation</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a href="gallery.html" class="nav-link">Gallery</a>
+            </li>
+            <li class="nav-item">
+                <a href="testomonials.html" class="nav-link">Testimonials</a>
+            </li>
+            <li class="nav-item">
+                <a href="contact.html" class="nav-link">Contact Us</a>
+            </li>
+
+            <!-- Mobile account button -->
+            <div class="account-container mobile-account">
+                <button class="account-btn">
+                    <i class="fas fa-user-circle"></i>
+                    Account
+                </button>
+            </div>
+        </ul>
+
+        <!-- Desktop account button -->
+        <button class="account-btn desktop-account">
+            <i class="fas fa-user-circle"></i>Account
+        </button>
+
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </div>
+</nav>
+
+<!-- Search Modal -->
+<div class="modal fade" id="searchModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <input type="text" id="searchInput" class="form-control" placeholder="Search Reliance...">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="searchResults" class="list-group">
+                    <!-- Dynamic search results will be populated here -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Support Modal -->
+<div class="modal fade" id="supportModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Support & Contact</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="contact-option text-center" data-type="phone">
+                            <i class="fas fa-phone fa-3x mb-3"></i>
+                            <h6>Call Us</h6>
+                            <p>1800-123-4567</p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="contact-option text-center" data-type="email">
+                            <i class="fas fa-envelope fa-3x mb-3"></i>
+                            <h6>Email Support</h6>
+                            <p>support@reliance.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <h6>Customer Support Hours</h6>
+                    <p>Monday - Saturday: 9 AM to 6 PM</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const searchInput = document.getElementById('searchInput');
+        const searchResults = document.getElementById('searchResults');
+
+        // Sample search data
+        const searchData = [
+            { title: 'About Reliance', link: '#about' },
+            { title: 'Investor Relations', link: '#investors' },
+            { title: 'Sustainability Initiatives', link: '#sustainability' },
+            { title: 'Careers at Reliance', link: '#careers' },
+            { title: 'Digital Services', link: '#digital-services' },
+            { title: 'Energy Business', link: '#energy' }
+        ];
+
+        searchInput.addEventListener('input', function() {
+            const query = this.value.toLowerCase();
+            const filteredResults = searchData.filter(item => 
+                item.title.toLowerCase().includes(query)
+            );
+
+            searchResults.innerHTML = filteredResults.map(result => 
+                `<a href="${result.link}" class="list-group-item list-group-item-action">
+                    ${result.title}
+                </a>`
+            ).join('') || '<p class="list-group-item">No results found</p>';
+        });
+
+        // Contact option click handler
+        document.querySelectorAll('.contact-option').forEach(option => {
+            option.addEventListener('click', function() {
+                const type = this.getAttribute('data-type');
+                if (type === 'phone') {
+                    window.location.href = 'tel:18001234567';
+                } else if (type === 'email') {
+                    window.location.href = 'mailto:support@reliance.com';
+                }
+            });
+        });
+
+        // Add click handler for dropdown headings
+        document.querySelectorAll('.dropdown-menu h6').forEach(heading => {
+            heading.addEventListener('click', function() {
+                // Find the first link under this heading and navigate to it
+                const firstLink = this.nextElementSibling;
+                if (firstLink && firstLink.getAttribute('href')) {
+                    window.location.href = firstLink.getAttribute('href');
+                }
+            });
+        });
+    });
+</script>
+    <!-- Hero Section -->
+    <header id="home">
+        <div class="hero-content">
+            <h2>Changing Lives, One Hope at a Time</h2>
+            <p>We are dedicated to making a difference in communities around the world through sustainable development and compassionate support.</p>
+            <a href="#donate" class="cta-button">Join Our Mission</a>
+        </div>
+    </header>
+
+    <!-- Causes Section -->
+    <!-- Causes Section -->
+<section id="causes">
+    <h3>Our Causes</h3>
+    <div class="causes-grid">
+        <div class="cause-card">
+            <img src="/charity/assets/education.jpeg" alt="Education">
+            <h4>Education</h4>
+            <p>Providing quality education to underprivileged children worldwide.</p>
+        </div>
+        <div class="cause-card">
+            <img src="/charity/assets/healthcare.jpg" alt="Healthcare">
+            <h4>Healthcare</h4>
+            <p>Ensuring access to essential medical services and treatments.</p>
+        </div>
+        <div class="cause-card">
+            <img src="/charity/assets/community.webp" alt="Community Development">
+            <h4>Community Development</h4>
+            <p>Supporting sustainable community growth and empowerment.</p>
+        </div>
+    </div>
+</section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <h3>Stories of Hope</h3>
+        <div class="testimonials-container">
+            <!-- Testimonials will be dynamically added by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section id="donate">
+        <div class="donate-content">
+            <h3>Make a Difference Today</h3>
+            <p>Your donation can change lives. Every contribution, no matter how small, brings hope and creates opportunities.</p>
+            <form class="donate-form">
+                <input type="number" placeholder="Donation Amount" min="1">
+                <button type="submit">Donate Now</button>
+            </form>
+        </div>
+    </section>
+
+    <div class="footer-container">
+        <!-- Subscribe & Social Media -->
+        <div class="subscribe-section">
+            <div class="subscribe-form">
+                <label for="email">Subscribe to our news alerts</label>
+                <div class="form-container">
+                    <input type="email" id="email" placeholder="Email Id">
+                    <button>Subscribe</button>
+                </div>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/relianceIndustriestLimited" target="_blank" aria-label="Facebook">
+                    <img src="https://rilstaticasset.akamaized.net/sites/default/files/2022-08/facebook-icon.svg" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/relianceupdates/" target="_blank" aria-label="Instagram">
+                    <img src="https://rilstaticasset.akamaized.net/sites/default/files/2022-11/insta-icon.svg" alt="Instagram">
+                </a>
+                <a href="https://twitter.com/RIL" target="_blank" aria-label="Twitter">
+                    <img src="https://rilstaticasset.akamaized.net/sites/default/files/2023-09/twitter-icon%20%281%29.svg" alt="Twitter">
+                </a>
+                <a href="https://www.linkedin.com/company/reliance" target="_blank" aria-label="LinkedIn">
+                    <img src="https://rilstaticasset.akamaized.net/sites/default/files/2022-08/linkedin-icon.svg" alt="LinkedIn">
+                </a>
+                <a href="https://www.youtube.com/user/flameoftruth2014" target="_blank" aria-label="YouTube">
+                    <img src="https://rilstaticasset.akamaized.net/sites/default/files/2022-08/youtube-icon.svg" alt="YouTube">
+                </a>
+            </div>
+        </div>
+      
+        <!-- Footer Links -->
+        <div class="footer-links">
+            <div>
+                <h4>About</h4>
+                <a href="/DM/about.html">About Us</a>
+                
+            </div>
+            <div>
+                <h4>Businesses</h4>
+                <a class="dropdown-item" href="/bussines section/mart/mart.html">Mart</a>
+                <a class="dropdown-item" href="/bussines section/cafe/cafe.html">Cafe</a>
+                <a class="dropdown-item" href="/bussines section/real estate/real.html">Real Estate</a>
+                <a class="dropdown-item" href="/medical/medical.html">Medical Devices</a>
+                <a class="dropdown-item" href="/charity/charity.html">Charity</a>
+                <a class="dropdown-item" href="/Dhammanjali-Foundation/index.html">Dhammanjali Foundation</a>
+                <!-- <a class="dropdown-item" href="#">Products(Other)</a> -->
+            </div>
+            
+            <div>
+                <h4><a href="/Gallery/gallery.html">Gallery</a></h4>
+                
+            </div>
+            <div>
+                <h4><a href="/testomoni/testomonials.html">Testimonials</a></h4>
+                
+            </div>
+        </div>
+      
+        <!-- Footer Logo -->
+        <div class="footer-logo">
+            <a href="assete/dhammalogo.png" role="reliance-logo">
+                <!-- <img src="https://rilstaticasset.akamaized.net/sites/default/files/2022-09/logo-ft.png" alt="Reliance Industries Limited"> -->
+            </a>
+        </div>
+      
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <span>© 2025 Reliance Industries Limited. All rights reserved.</span>
+            <div>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Legal Notice</a>
+                <a href="#">Report Security Issue</a>
+            </div>
+        </div>
+    </div>    
+</body>
+</html>
