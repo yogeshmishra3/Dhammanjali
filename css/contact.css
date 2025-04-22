@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-        
+
 * {
     margin: 0;
     padding: 0;
@@ -25,16 +25,17 @@ body {
 .nav-container {
     position: relative;
     width: 100%;
-   
+
     color: white;
     overflow: hidden;
 }
+
 .nav-container {
- 
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
+    
     margin: 0 auto;
     padding: 15px 20px;
 }
@@ -193,21 +194,21 @@ body {
     .hamburger {
         display: block;
     }
-    
+
     .hamburger.active .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
         background-color: var(--primary);
     }
-    
+
     .hamburger.active .bar:nth-child(2) {
         opacity: 0;
     }
-    
+
     .hamburger.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
         background-color: var(--primary);
     }
-    
+
     .nav-menu {
         position: fixed;
         top: 70px;
@@ -222,27 +223,27 @@ body {
         overflow-y: auto;
         padding: 20px 0;
     }
-    
+
     .nav-menu.active {
         left: 0;
     }
-    
+
     .nav-item {
         margin: 15px 0;
         width: 100%;
     }
-    
+
     .nav-link {
         padding: 8px 20px;
         display: inline-block;
         width: 100%;
         text-align: left;
     }
-    
+
     .nav-link::after {
         display: none;
     }
-    
+
     .dropdown-menu {
         position: static;
         opacity: 1;
@@ -259,34 +260,34 @@ body {
         border-left: 3px solid var(--primary);
         background-color: rgba(255, 107, 0, 0.05);
     }
-    
+
     .dropdown.active .dropdown-menu {
         max-height: 500px;
         padding: 10px 0;
     }
-    
+
     .dropdown-item {
         padding: 10px 30px;
     }
-    
+
     /* Account button in mobile */
     .account-container {
         width: 100%;
         padding: 0 20px;
         margin-top: 15px;
     }
-    
+
     .account-btn {
         width: 100%;
         justify-content: center;
         padding: 12px;
     }
-    
+
     /* Hide desktop account button */
     .desktop-account {
         display: none;
     }
-    
+
     /* Show mobile account button */
     .mobile-account {
         display: block;
@@ -307,7 +308,7 @@ body {
 @font-face {
     font-family: 'JioType';
     src: url('/assets/fonts/JioType-Regular.woff2') format('woff2'),
-         url('/assets/fonts/JioType-Regular.woff') format('woff');
+        url('/assets/fonts/JioType-Regular.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -316,7 +317,7 @@ body {
 @font-face {
     font-family: 'Playfair Display';
     src: url('/assets/fonts/PlayfairDisplay-Regular.woff2') format('woff2'),
-         url('/assets/fonts/PlayfairDisplay-Regular.woff') format('woff');
+        url('/assets/fonts/PlayfairDisplay-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -337,7 +338,12 @@ body {
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: "Playfair Display", serif;
     color: var(--primary-color);
 }
@@ -572,9 +578,9 @@ h1, h2, h3, h4, h5, h6 {
 .footer-container {
     background-color: #fff;
     padding: 40px 20px;
-    max-width: 1200px;
     margin: 0 auto;
 }
+
 .subscribe-section {
     display: flex;
     justify-content: space-between;
@@ -583,16 +589,19 @@ h1, h2, h3, h4, h5, h6 {
     padding-bottom: 30px;
     margin-bottom: 30px;
 }
+
 .subscribe-form {
     width: 100%;
     max-width: 500px;
 }
+
 .subscribe-form label {
     font-weight: 600;
     color: orange;
     margin-bottom: 10px;
     display: block;
 }
+
 .form-container {
     display: flex;
     border: 1px solid orange;
@@ -600,6 +609,7 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
     background-color: #faf8f8;
 }
+
 .subscribe-form input {
     flex-grow: 1;
     padding: 10px 15px;
@@ -607,10 +617,12 @@ h1, h2, h3, h4, h5, h6 {
     outline: none;
     color: orange;
 }
+
 .subscribe-form input::placeholder {
     color: orange;
     opacity: 0.7;
 }
+
 .subscribe-form button {
     padding: 10px 20px;
     border: none;
@@ -620,13 +632,16 @@ h1, h2, h3, h4, h5, h6 {
     cursor: pointer;
     transition: background-color 0.3s;
 }
+
 .subscribe-form button:hover {
     background-color: #a77c2c;
 }
+
 .social-icons {
     display: flex;
     gap: 15px;
 }
+
 .social-icons a {
     text-decoration: none;
     background-color: orange;
@@ -638,33 +653,40 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     transition: background-color 0.3s;
 }
+
 .social-icons a:hover {
     background-color: #a77c2c;
 }
+
 .social-icons a img {
     max-width: 20px;
     max-height: 20px;
     filter: brightness(0) invert(1);
 }
+
 .footer-links {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     padding-bottom: 30px;
 }
+
 .footer-links div {
     display: flex;
     flex-direction: column;
 }
+
 .footer-links h4 {
     color: orange;
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 15px;
 }
+
 .footer-links h4 a {
     color: orange;
 }
+
 .footer-links a {
     text-decoration: none;
     color: orange;
@@ -672,9 +694,11 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 8px;
     transition: color 0.3s;
 }
+
 .footer-links a:hover {
     color: #a77c2c;
 }
+
 .footer-bottom {
     display: flex;
     justify-content: space-between;
@@ -684,21 +708,25 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 14px;
     color: orange;
 }
+
 .footer-bottom a {
     text-decoration: none;
     color: orange;
     margin-left: 15px;
     transition: color 0.3s;
 }
+
 .footer-bottom a:hover {
     color: orange;
 }
+
 .footer-logo {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px 0;
 }
+
 .footer-logo img {
     max-width: 200px;
     height: auto;
@@ -709,22 +737,27 @@ h1, h2, h3, h4, h5, h6 {
     .footer-container {
         padding: 20px;
     }
+
     .subscribe-section {
         flex-direction: column;
         align-items: flex-start;
         gap: 20px;
     }
+
     .footer-links {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
+
     .footer-bottom {
         flex-direction: column;
         text-align: center;
     }
+
     .footer-bottom div {
         margin-top: 10px;
     }
+
     .social-icons {
         width: 100%;
         justify-content: flex-start;
@@ -736,9 +769,11 @@ h1, h2, h3, h4, h5, h6 {
     .footer-links {
         grid-template-columns: 1fr;
     }
+
     .form-container {
         flex-direction: column;
     }
+
     .subscribe-form button {
         width: 100%;
         margin-top: 10px;
