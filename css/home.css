@@ -25,16 +25,19 @@ body {
 
 .nav-container {
     position: relative;
+    width: 100%;
+
     color: white;
     overflow: hidden;
 }
 
 .nav-container {
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0;
+ max-width: 1200px;
+    margin: 0 auto;
     padding: 15px 20px;
 }
 
@@ -119,7 +122,6 @@ body {
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
-    z-index: 1000;
 }
 
 .dropdown:hover .dropdown-menu {
