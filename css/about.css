@@ -553,7 +553,8 @@ body {
 
 /* Customer Value Section Styles */
 .customer-value-section {
-    background-color: #f4f4f4;
+    background-color: #003893;
+    color: white;
     padding: 50px 0;
 }
 
@@ -621,7 +622,7 @@ body {
 
 /* Awards Section Styles */
 .awards-section {
-    background-color: #c49c5e;
+    background-color: orange;
     padding: 50px 0;
 }
 
