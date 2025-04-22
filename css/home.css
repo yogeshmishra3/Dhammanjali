@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-        
+
 * {
     margin: 0;
     padding: 0;
@@ -25,12 +25,13 @@ body {
 .nav-container {
     position: relative;
     width: 100%;
-   
+
     color: white;
     overflow: hidden;
 }
+
 .nav-container {
- 
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -193,23 +194,24 @@ body {
     .hamburger {
         display: block;
     }
-    
+
     .hamburger.active .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
         background-color: var(--primary);
     }
-    
+
     .hamburger.active .bar:nth-child(2) {
         opacity: 0;
     }
-    
+
     .hamburger.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
         background-color: var(--primary);
     }
-    
+
     .nav-menu {
         position: fixed;
+        z-index: 1;
         top: 70px;
         left: -100%;
         width: 100%;
@@ -222,27 +224,27 @@ body {
         overflow-y: auto;
         padding: 20px 0;
     }
-    
+
     .nav-menu.active {
         left: 0;
     }
-    
+
     .nav-item {
         margin: 15px 0;
         width: 100%;
     }
-    
+
     .nav-link {
         padding: 8px 20px;
         display: inline-block;
         width: 100%;
         text-align: left;
     }
-    
+
     .nav-link::after {
         display: none;
     }
-    
+
     .dropdown-menu {
         position: static;
         opacity: 1;
@@ -259,34 +261,34 @@ body {
         border-left: 3px solid var(--primary);
         background-color: rgba(255, 107, 0, 0.05);
     }
-    
+
     .dropdown.active .dropdown-menu {
         max-height: 500px;
         padding: 10px 0;
     }
-    
+
     .dropdown-item {
         padding: 10px 30px;
     }
-    
+
     /* Account button in mobile */
     .account-container {
         width: 100%;
         padding: 0 20px;
         margin-top: 15px;
     }
-    
+
     .account-btn {
         width: 100%;
         justify-content: center;
         padding: 12px;
     }
-    
+
     /* Hide desktop account button */
     .desktop-account {
         display: none;
     }
-    
+
     /* Show mobile account button */
     .mobile-account {
         display: block;
@@ -297,6 +299,7 @@ body {
 .mobile-account {
     display: none;
 }
+
 /* Hero Section */
 .hero {
     position: relative;
@@ -329,7 +332,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    
+
 }
 
 /* Hero Content */
@@ -343,9 +346,11 @@ body {
     font-size: 4rem;
     font-weight: bold;
 }
+
 @media (max-width: 768px) {
     .hero-content h1 {
         font-size: 2rem;
+        z-index: -1;
     }
 }
 
@@ -384,21 +389,24 @@ body {
     .hero-content h1 {
         font-size: 2.5rem;
     }
-    
+
     .btn {
         font-size: 16px;
         padding: 10px 20px;
     }
 }
+
 /* we care */
 .we-care-section {
     padding: 50px 20px;
-    background-color: #fdf2e0; /* Light cream background */
+    background-color: #fdf2e0;
+    /* Light cream background */
     text-align: center;
 }
 
 .we-care-image {
-    width: 50%; /* Adjust the size of the image */
+    width: 50%;
+    /* Adjust the size of the image */
     max-width: 600px;
 }
 
@@ -409,18 +417,20 @@ body {
     margin: 20px auto;
     line-height: 42px;
 }
+
 @media (max-width: 768px) {
     .we-care-text {
         font-size: 18px;
         line-height: 24px;
     }
 }
+
 /* image content */
 
 .container {
     position: relative;
     width: 100%;
-    height: 20vh;
+    height: 80vh;
     background-size: cover;
     background-position: center;
     transition: background 0.5s ease-in-out;
@@ -432,7 +442,8 @@ body {
     position: absolute;
     top: 20%;
     left: 10%;
-    max-width: 500px;
+    padding: 30px;
+
 }
 
 h1 {
@@ -478,6 +489,7 @@ p {
     background: white;
     color: black;
 }
+
 @media (max-width: 992px) {
     .content {
         position: static;
@@ -487,6 +499,7 @@ p {
 
     h1 {
         font-size: 50px;
+        z-index: -1;
     }
 
     p {
@@ -540,6 +553,7 @@ p {
         font-size: 14px;
     }
 }
+
 /* foundation */
 .foundation-container {
     width: 80%;
@@ -548,7 +562,8 @@ p {
     display: flex;
     border-radius: 10px;
     overflow: hidden;
-    margin: 40px auto; /* Center the container and add top/bottom space */
+    margin: 40px auto;
+    /* Center the container and add top/bottom space */
 }
 
 .text-foundation {
@@ -600,6 +615,7 @@ p {
     left: 0;
     transition: opacity 1s ease-in-out;
 }
+
 @media (max-width: 992px) {
     .foundation-container {
         flex-direction: column;
@@ -607,7 +623,8 @@ p {
         text-align: center;
     }
 
-    .text-foundation, .image-foundation {
+    .text-foundation,
+    .image-foundation {
         width: 100%;
         padding: 20px;
     }
@@ -649,12 +666,12 @@ p {
 .nav-container {
     position: relative;
     width: 100%;
-    
+
     color: white;
     overflow: hidden;
 }
-  
-  /* Top Navigation */
+
+/* Top Navigation */
 .top-nav {
     position: absolute;
     top: 30px;
@@ -662,7 +679,7 @@ p {
     display: flex;
     gap: 450px;
 }
-  
+
 .nav-item {
     cursor: pointer;
     font-size: 30px;
@@ -672,12 +689,13 @@ p {
 }
 
 
-  
+
 .nav-item:hover {
     border-bottom: 2px solid gold;
     color: gold;
-  
+
 }
+
 @media (max-width: 768px) {
     .top-nav {
         flex-direction: column;
@@ -686,14 +704,14 @@ p {
         transform: translateX(-50%);
         align-items: center;
     }
-    
+
     .nav-item {
         font-size: 20px;
     }
 }
 
-  
-  /* Content Section */
+
+/* Content Section */
 .show-container {
     display: flex;
     flex-direction: column;
@@ -719,7 +737,8 @@ p {
     text-transform: uppercase;
 }
 
-.tab:hover, .tab.active {
+.tab:hover,
+.tab.active {
     border-bottom: 2px solid white;
 }
 
@@ -766,23 +785,25 @@ p {
     border-radius: 5px;
     font-weight: bold;
 }
+
 @media (max-width: 768px) {
     .tabs {
         flex-direction: column;
         gap: 20px;
     }
-    
+
     .content-wrapper {
         flex-direction: column;
         text-align: center;
     }
-    
-    .content-container, .image-container {
+
+    .content-container,
+    .image-container {
         max-width: 100%;
         text-align: center;
         padding: 10px;
     }
-    
+
     .image-container img {
         max-width: 100%;
     }
@@ -811,7 +832,7 @@ p {
     background: white;
     padding: 20px;
     border-radius: 10px;
-    
+
 }
 
 /* Left Content */
@@ -854,7 +875,7 @@ p {
 .announcement-image img {
     max-width: 100%;
     border-radius: 10px;
-    
+
 }
 
 
@@ -929,6 +950,7 @@ p {
 .more-announcements button:hover {
     background: #eee;
 }
+
 /* banner */
 .agm-banner {
     display: flex;
@@ -949,7 +971,7 @@ p {
 }
 
 .agm-highlight {
-    background-color: #caa35d; 
+    background-color: #caa35d;
     color: white;
     text-align: left;
     padding: 40px 40px;
@@ -975,7 +997,7 @@ p {
     cursor: pointer;
     border-radius: 30px;
     transition: all 0.3s ease-in-out;
-    
+
 }
 
 .download-btn:hover {
@@ -988,21 +1010,26 @@ p {
         flex-direction: column;
         text-align: center;
     }
+
     .announcement-content {
         padding-right: 0;
     }
+
     .announcement-grid {
         flex-direction: column;
         align-items: center;
     }
+
     .agm-banner {
         flex-direction: column;
         padding: 20px;
     }
+
     .agm-highlight {
         padding: 20px;
     }
 }
+
 /* investor */
 .investors-section {
     padding: 40px;
@@ -1014,6 +1041,7 @@ p {
 h1 {
     font-size: 50px;
     margin-bottom: 20px;
+    z-index: -1;
 }
 
 .notice-content {
@@ -1023,9 +1051,10 @@ h1 {
     gap: 20px;
 }
 
-.notices, .investor-documents {
+.notices,
+.investor-documents {
     width: 30%;
-    
+
 }
 
 h2 {
@@ -1120,10 +1149,13 @@ p {
         align-items: center;
     }
 
-    .notices, .investor-documents, .stock-market {
+    .notices,
+    .investor-documents,
+    .stock-market {
         width: 100%;
         text-align: center;
     }
+
     .agm-banner {
         flex-direction: column;
         padding: 30px;
@@ -1139,6 +1171,7 @@ p {
         padding-left: 0;
     }
 }
+
 .layout-container {
     width: 100%;
     margin: auto;
@@ -1147,21 +1180,25 @@ p {
     background-color: #caa35d;
     color: white;
 }
+
 .layout {
     display: grid;
     grid-template-columns: 60% 40%;
     align-items: center;
     gap: 0px;
 }
+
 .text-layout {
     text-align: left;
     width: 80%;
     padding-left: 50px;
     font-size: 18px;
 }
+
 .buttons {
     margin-top: 20px;
 }
+
 .buttons button {
     padding: 10px 20px;
     margin: 10px;
@@ -1172,23 +1209,28 @@ p {
     font-size: 16px;
     border-radius: 10px;
 }
+
 .buttons button:hover {
     background-color: white;
     color: #caa35d;
 }
+
 .image-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
     gap: 10px;
 }
+
 .large-image {
     grid-column: span 2;
 }
+
 .image-grid img {
     width: 100%;
     border-radius: 10px;
 }
+
 @media (max-width: 1024px) {
     .layout {
         grid-template-columns: 1fr;
@@ -1238,6 +1280,7 @@ p {
         padding: 8px;
     }
 }
+
 /* form */
 .subscribe-section {
     display: flex;
@@ -1245,8 +1288,9 @@ p {
     align-items: center;
     padding: 20px 10%;
     background-color: white;
-   
-}  
+
+}
+
 .subscribe-form {
     display: flex;
     flex-direction: column;
@@ -1263,7 +1307,7 @@ p {
     border: 1px solid #ddd;
     border-radius: 5px;
     overflow: hidden;
-    width:350px
+    width: 350px
 }
 
 .input-group input {
@@ -1327,6 +1371,7 @@ p {
     max-width: 1200px;
     margin: 0 auto;
 }
+
 .subscribe-section {
     display: flex;
     justify-content: space-between;
@@ -1335,16 +1380,19 @@ p {
     padding-bottom: 30px;
     margin-bottom: 30px;
 }
+
 .subscribe-form {
     width: 100%;
     max-width: 500px;
 }
+
 .subscribe-form label {
     font-weight: 600;
     color: orange;
     margin-bottom: 10px;
     display: block;
 }
+
 .form-container {
     display: flex;
     border: 1px solid orange;
@@ -1352,6 +1400,7 @@ p {
     overflow: hidden;
     background-color: #faf8f8;
 }
+
 .subscribe-form input {
     flex-grow: 1;
     padding: 10px 15px;
@@ -1359,10 +1408,12 @@ p {
     outline: none;
     color: orange;
 }
+
 .subscribe-form input::placeholder {
     color: orange;
     opacity: 0.7;
 }
+
 .subscribe-form button {
     padding: 10px 20px;
     border: none;
@@ -1372,13 +1423,16 @@ p {
     cursor: pointer;
     transition: background-color 0.3s;
 }
+
 .subscribe-form button:hover {
     background-color: #a77c2c;
 }
+
 .social-icons {
     display: flex;
     gap: 15px;
 }
+
 .social-icons a {
     text-decoration: none;
     background-color: orange;
@@ -1390,33 +1444,40 @@ p {
     justify-content: center;
     transition: background-color 0.3s;
 }
+
 .social-icons a:hover {
     background-color: #a77c2c;
 }
+
 .social-icons a img {
     max-width: 20px;
     max-height: 20px;
     filter: brightness(0) invert(1);
 }
+
 .footer-links {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     padding-bottom: 30px;
 }
+
 .footer-links div {
     display: flex;
     flex-direction: column;
 }
+
 .footer-links h4 {
     color: orange;
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 15px;
 }
+
 .footer-links h4 a {
     color: orange;
 }
+
 .footer-links a {
     text-decoration: none;
     color: orange;
@@ -1424,9 +1485,11 @@ p {
     margin-bottom: 8px;
     transition: color 0.3s;
 }
+
 .footer-links a:hover {
     color: #a77c2c;
 }
+
 .footer-bottom {
     display: flex;
     justify-content: space-between;
@@ -1436,21 +1499,25 @@ p {
     font-size: 14px;
     color: orange;
 }
+
 .footer-bottom a {
     text-decoration: none;
     color: orange;
     margin-left: 15px;
     transition: color 0.3s;
 }
+
 .footer-bottom a:hover {
     color: orange;
 }
+
 .footer-logo {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px 0;
 }
+
 .footer-logo img {
     max-width: 200px;
     height: auto;
@@ -1461,22 +1528,27 @@ p {
     .footer-container {
         padding: 20px;
     }
+
     .subscribe-section {
         flex-direction: column;
         align-items: flex-start;
         gap: 20px;
     }
+
     .footer-links {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
+
     .footer-bottom {
         flex-direction: column;
         text-align: center;
     }
+
     .footer-bottom div {
         margin-top: 10px;
     }
+
     .social-icons {
         width: 100%;
         justify-content: flex-start;
@@ -1488,9 +1560,11 @@ p {
     .footer-links {
         grid-template-columns: 1fr;
     }
+
     .form-container {
         flex-direction: column;
     }
+
     .subscribe-form button {
         width: 100%;
         margin-top: 10px;
