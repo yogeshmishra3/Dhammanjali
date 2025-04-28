@@ -117,7 +117,7 @@ body {
     border-radius: 8px;
     padding: 10px 0;
     opacity: 0;
-    visibility: hidden;
+    /* visibility: hidden; */
     transition: all 0.3s ease;
 }
 

@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-        
+
 * {
     margin: 0;
     padding: 0;
@@ -25,12 +25,13 @@ body {
 .nav-container {
     position: relative;
     width: 100%;
-   
+
     color: white;
     overflow: hidden;
 }
+
 .nav-container {
- 
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -193,21 +194,21 @@ body {
     .hamburger {
         display: block;
     }
-    
+
     .hamburger.active .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
         background-color: var(--primary);
     }
-    
+
     .hamburger.active .bar:nth-child(2) {
         opacity: 0;
     }
-    
+
     .hamburger.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
         background-color: var(--primary);
     }
-    
+
     .nav-menu {
         position: fixed;
         top: 70px;
@@ -222,27 +223,27 @@ body {
         overflow-y: auto;
         padding: 20px 0;
     }
-    
+
     .nav-menu.active {
         left: 0;
     }
-    
+
     .nav-item {
         margin: 15px 0;
         width: 100%;
     }
-    
+
     .nav-link {
         padding: 8px 20px;
         display: inline-block;
         width: 100%;
         text-align: left;
     }
-    
+
     .nav-link::after {
         display: none;
     }
-    
+
     .dropdown-menu {
         position: static;
         opacity: 1;
@@ -259,39 +260,40 @@ body {
         border-left: 3px solid var(--primary);
         background-color: rgba(255, 107, 0, 0.05);
     }
-    
+
     .dropdown.active .dropdown-menu {
         max-height: 500px;
         padding: 10px 0;
     }
-    
+
     .dropdown-item {
         padding: 10px 30px;
     }
-    
+
     /* Account button in mobile */
     .account-container {
         width: 100%;
         padding: 0 20px;
         margin-top: 15px;
     }
-    
+
     .account-btn {
         width: 100%;
         justify-content: center;
         padding: 12px;
     }
-    
+
     /* Hide desktop account button */
     .desktop-account {
         display: none;
     }
-    
+
     /* Show mobile account button */
     .mobile-account {
         display: block;
     }
 }
+
 /* Hide by default */
 .mobile-account {
     display: none;
@@ -312,14 +314,17 @@ body {
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
+
 .slide {
     min-width: 100%;
     height: 100vh;
 }
+
 .slide img {
     width: 100%;
     display: block;
 }
+
 .buttons {
     position: absolute;
     top: 50%;
@@ -328,16 +333,19 @@ body {
     justify-content: space-between;
     transform: translateY(-50%);
 }
+
 .buttons button {
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
     padding: 10px;
     cursor: pointer;
 }
+
 .buttons button:hover {
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
 }
+
 @media (max-width: 768px) {
     .buttons button {
         padding: 8px;
@@ -350,50 +358,60 @@ body {
     margin-top: 20px;
     text-align: center;
 }
+
 .logo img {
     width: 150px;
     text-align: center;
 }
+
 .quotes {
     margin: 20px auto;
     max-width: 800px;
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
 }
+
 .quote {
     width: 45%;
     font-size: 18px;
     font-weight: bold;
 }
+
 .quote span {
     display: block;
     margin-top: 10px;
     font-size: 14px;
     font-weight: normal;
 }
+
 @media (max-width: 768px) {
     .quotes {
         flex-direction: column;
         text-align: center;
     }
+
     .quote {
         width: 90%;
     }
 }
+
 .menu {
     padding: 50px 50px;
 }
+
 .heading {
     font-family: "jioType";
     text-align: center;
-    font-size: 36px; /* Increase font size as you like */
-    margin-bottom: 20px; /* Optional spacing below the heading */
+    font-size: 36px;
+    /* Increase font size as you like */
+    margin-bottom: 20px;
+    /* Optional spacing below the heading */
 }
 
 .menu-list {
     display: flex;
-    flex-wrap: wrap;  
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
 }
@@ -403,18 +421,20 @@ body {
     background: white;
     padding: 15px;
     border-radius: 5px;
-    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .menu-item img {
     width: 100%;
     border-radius: 5px;
 }
+
 /* Responsive Design */
 @media (max-width: 900px) {
     .menu-list {
         flex-wrap: wrap;
     }
+
     .menu-item {
         width: 45%;
     }
@@ -437,6 +457,7 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
+
 .testimonial {
     display: none;
     flex-direction: column;
@@ -445,6 +466,7 @@ body {
     border-radius: 12px;
     text-align: center;
 }
+
 .testimonial.active {
     display: flex;
 }
@@ -496,6 +518,7 @@ body {
 .slider-buttons button:hover {
     background: #555;
 }
+
 @media (max-width: 768px) {
     .testimonial-slider {
         max-width: 100%;
@@ -523,12 +546,14 @@ body {
         width: 100%;
     }
 }
+
 .footer-container {
     background-color: #fff;
     padding: 40px 20px;
-    max-width: 1200px;
     margin: 0 auto;
+    margin-top: 50px;
 }
+
 .subscribe-section {
     display: flex;
     justify-content: space-between;
@@ -537,16 +562,19 @@ body {
     padding-bottom: 30px;
     margin-bottom: 30px;
 }
+
 .subscribe-form {
     width: 100%;
     max-width: 500px;
 }
+
 .subscribe-form label {
     font-weight: 600;
     color: orange;
     margin-bottom: 10px;
     display: block;
 }
+
 .form-container {
     display: flex;
     border: 1px solid orange;
@@ -554,6 +582,7 @@ body {
     overflow: hidden;
     background-color: #faf8f8;
 }
+
 .subscribe-form input {
     flex-grow: 1;
     padding: 10px 15px;
@@ -561,10 +590,12 @@ body {
     outline: none;
     color: orange;
 }
+
 .subscribe-form input::placeholder {
     color: orange;
     opacity: 0.7;
 }
+
 .subscribe-form button {
     padding: 10px 20px;
     border: none;
@@ -574,13 +605,16 @@ body {
     cursor: pointer;
     transition: background-color 0.3s;
 }
+
 .subscribe-form button:hover {
     background-color: #a77c2c;
 }
+
 .social-icons {
     display: flex;
     gap: 15px;
 }
+
 .social-icons a {
     text-decoration: none;
     background-color: orange;
@@ -592,33 +626,40 @@ body {
     justify-content: center;
     transition: background-color 0.3s;
 }
+
 .social-icons a:hover {
     background-color: #a77c2c;
 }
+
 .social-icons a img {
     max-width: 20px;
     max-height: 20px;
     filter: brightness(0) invert(1);
 }
+
 .footer-links {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     padding-bottom: 30px;
 }
+
 .footer-links div {
     display: flex;
     flex-direction: column;
 }
+
 .footer-links h4 {
     color: orange;
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 15px;
 }
+
 .footer-links h4 a {
     color: orange;
 }
+
 .footer-links a {
     text-decoration: none;
     color: orange;
@@ -626,9 +667,11 @@ body {
     margin-bottom: 8px;
     transition: color 0.3s;
 }
+
 .footer-links a:hover {
     color: #a77c2c;
 }
+
 .footer-bottom {
     display: flex;
     justify-content: space-between;
@@ -638,21 +681,25 @@ body {
     font-size: 14px;
     color: orange;
 }
+
 .footer-bottom a {
     text-decoration: none;
     color: orange;
     margin-left: 15px;
     transition: color 0.3s;
 }
+
 .footer-bottom a:hover {
     color: orange;
 }
+
 .footer-logo {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px 0;
 }
+
 .footer-logo img {
     max-width: 200px;
     height: auto;
@@ -663,22 +710,27 @@ body {
     .footer-container {
         padding: 20px;
     }
+
     .subscribe-section {
         flex-direction: column;
         align-items: flex-start;
         gap: 20px;
     }
+
     .footer-links {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
+
     .footer-bottom {
         flex-direction: column;
         text-align: center;
     }
+
     .footer-bottom div {
         margin-top: 10px;
     }
+
     .social-icons {
         width: 100%;
         justify-content: flex-start;
@@ -690,9 +742,11 @@ body {
     .footer-links {
         grid-template-columns: 1fr;
     }
+
     .form-container {
         flex-direction: column;
     }
+
     .subscribe-form button {
         width: 100%;
         margin-top: 10px;
