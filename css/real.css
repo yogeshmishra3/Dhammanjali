@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-        
+
 * {
     margin: 0;
     padding: 0;
@@ -25,12 +25,13 @@ body {
 .nav-container {
     position: relative;
     width: 100%;
-   
+
     color: white;
     overflow: hidden;
 }
+
 .nav-container {
- 
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -193,21 +194,21 @@ body {
     .hamburger {
         display: block;
     }
-    
+
     .hamburger.active .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
         background-color: var(--primary);
     }
-    
+
     .hamburger.active .bar:nth-child(2) {
         opacity: 0;
     }
-    
+
     .hamburger.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
         background-color: var(--primary);
     }
-    
+
     .nav-menu {
         position: fixed;
         top: 70px;
@@ -222,27 +223,27 @@ body {
         overflow-y: auto;
         padding: 20px 0;
     }
-    
+
     .nav-menu.active {
         left: 0;
     }
-    
+
     .nav-item {
         margin: 15px 0;
         width: 100%;
     }
-    
+
     .nav-link {
         padding: 8px 20px;
         display: inline-block;
         width: 100%;
         text-align: left;
     }
-    
+
     .nav-link::after {
         display: none;
     }
-    
+
     .dropdown-menu {
         position: static;
         opacity: 1;
@@ -259,43 +260,45 @@ body {
         border-left: 3px solid var(--primary);
         background-color: rgba(255, 107, 0, 0.05);
     }
-    
+
     .dropdown.active .dropdown-menu {
         max-height: 500px;
         padding: 10px 0;
     }
-    
+
     .dropdown-item {
         padding: 10px 30px;
     }
-    
+
     /* Account button in mobile */
     .account-container {
         width: 100%;
         padding: 0 20px;
         margin-top: 15px;
     }
-    
+
     .account-btn {
         width: 100%;
         justify-content: center;
         padding: 12px;
     }
-    
+
     /* Hide desktop account button */
     .desktop-account {
         display: none;
     }
-    
+
     /* Show mobile account button */
     .mobile-account {
         display: block;
     }
 }
+
 /* Hide by default */
 .mobile-account {
     display: none;
 }
+
 .slider-container {
     position: relative;
     display: flex;
@@ -311,14 +314,17 @@ body {
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
+
 .slide {
     min-width: 100%;
     height: 100vh;
 }
+
 .slide img {
     width: 100%;
     display: block;
 }
+
 .buttons {
     position: absolute;
     top: 50%;
@@ -327,19 +333,23 @@ body {
     justify-content: space-between;
     transform: translateY(-50%);
 }
+
 .buttons button {
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
     padding: 10px;
     cursor: pointer;
 }
+
 .buttons button:hover {
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
 }
+
 @media (max-width: 480px) {
     .slide {
-        height: 40vh; /* Even smaller height for very small screens */
+        height: 40vh;
+        /* Even smaller height for very small screens */
     }
 
     .buttons button {
@@ -347,9 +357,9 @@ body {
         font-size: 12px;
     }
 }
+
 /* slider */
 .real-estate-options {
-    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -371,7 +381,7 @@ body {
 
 .swiper-container {
     width: 80%;
-}   
+}
 
 .swiper-wrapper {
     display: flex;
@@ -380,7 +390,7 @@ body {
 
 .swiper-slide {
     text-align: center;
-   
+
     border-radius: 10px;
     overflow: hidden;
     padding: 15px;
@@ -388,7 +398,7 @@ body {
     flex-direction: column;
     align-items: center;
     position: relative;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
@@ -439,7 +449,7 @@ body {
     justify-content: center;
     font-size: 18px;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -465,6 +475,7 @@ body {
     font-size: 20px;
     font-weight: bold;
 }
+
 @media (max-width: 1024px) {
     .swiper-container {
         width: 90%;
@@ -524,6 +535,186 @@ body {
         font-size: 14px;
     }
 }
+
+/* Main slider container */
+.estate-slider {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+/* Slider track that holds all cards */
+.estate-slider__track {
+    display: flex;
+    gap: 20px;
+    padding: 10px 5px 30px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    /* For Firefox */
+    -ms-overflow-style: none;
+    /* For Internet Explorer and Edge */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.estate-slider__track::-webkit-scrollbar {
+    display: none;
+}
+
+/* Individual card styling */
+.estate-card {
+    flex: 0 0 auto;
+    width: 240px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    background-color: #fff;
+}
+
+.estate-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Image container for proper positioning */
+.estate-card__image-container {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+
+/* Image styling */
+.estate-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.estate-card:hover .estate-card__image {
+    transform: scale(1.05);
+}
+
+/* Card caption/title */
+.estate-card__caption {
+    padding: 16px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* New badge styling */
+.estate-card__badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #ff4757;
+    color: white;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 30px;
+    z-index: 2;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 8px rgba(255, 71, 87, 0.3);
+}
+
+/* Navigation arrows */
+.estate-slider__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    background-color: #fff;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: all 0.2s ease;
+}
+
+.estate-slider__arrow:hover {
+    background-color: #f8f8f8;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.estate-slider__arrow svg {
+    color: #333;
+}
+
+.estate-slider__arrow--prev {
+    left: 10px;
+}
+
+.estate-slider__arrow--next {
+    right: 10px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .estate-card {
+        width: 200px;
+    }
+
+    .estate-card__image-container {
+        height: 150px;
+    }
+
+    .estate-slider__arrow {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .estate-card {
+        width: 170px;
+    }
+
+    .estate-card__image-container {
+        height: 130px;
+    }
+
+    .estate-card__caption {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .estate-slider__arrow {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+/* Optional: Add this if you want a nice gradient overlay on images */
+.estate-card__image-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.estate-card:hover .estate-card__image-container::after {
+    opacity: 1;
+}
+
 /* hero */
 .hero {
     text-align: center;
@@ -604,6 +795,7 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+
 @media (max-width: 1024px) {
     .hero-container {
         flex-direction: column;
@@ -653,20 +845,23 @@ button:hover {
     }
 }
 
-/* handpicked */
 .projects {
     text-align: center;
-    padding: 30px 20px;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
 }
 
-h2 {
-    font-size: 24px;
+.projects h2 {
+    font-size: 32px;
     color: #222;
+    margin-bottom: 8px;
+    font-weight: 600;
 }
 
-p {
-    color: gray;
-    font-size: 16px;
+.projects p {
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 40px;
 }
 
 /* Carousel Container */
@@ -674,7 +869,7 @@ p {
     position: relative;
     max-width: 100%;
     overflow: hidden;
-    padding: 20px;
+    padding: 20px 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -682,16 +877,123 @@ p {
 
 .carousel {
     display: flex;
-    gap: 20px;
+    gap: 25px;
     overflow-x: auto;
     scroll-behavior: smooth;
-    padding-bottom: 10px;
-    white-space: nowrap; /* Ensure horizontal scrolling */
-    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    padding-bottom: 15px;
+    white-space: nowrap;
+    scrollbar-width: none;
+    /* Hide scrollbar for Firefox */
 }
 
 .carousel::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for Chrome, Safari */
+    display: none;
+    /* Hide scrollbar for Chrome, Safari */
+}
+
+/* Property Cards */
+.card {
+    width: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    white-space: normal;
+    flex-shrink: 0;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Image Container */
+.card-image {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+/* Image Styling */
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+/* Featured Tag */
+.featured {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: rgba(255, 99, 71, 0.9);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    z-index: 2;
+}
+
+/* Favorite Button */
+.favorite {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #ff6347;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 2;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.favorite:hover {
+    background-color: #ff6347;
+    color: white;
+}
+
+/* Card Information */
+.card-info {
+    padding: 20px;
+    position: relative;
+    text-align: left;
+}
+
+
+.card-info h3 {
+    font-size: 18px;
+    color: #222;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.card-info p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.price {
+    display: block;
+    font-size: 16px;
+    color: #ff6347;
+    font-weight: 600;
 }
 
 /* Navigation Buttons */
@@ -702,26 +1004,68 @@ button.next {
     transform: translateY(-50%);
     background-color: white;
     border: none;
-    font-size: 20px;
-    padding: 10px;
+    font-size: 22px;
+    width: 45px;
+    height: 45px;
     cursor: pointer;
     border-radius: 50%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
     z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
 }
 
 button.prev {
-    left: 10px;
+    left: 15px;
 }
 
 button.next {
-    right: 10px;
+    right: 15px;
 }
 
-button:hover {
-    background-color: #ddd;
+button.prev:hover,
+button.next:hover {
+    background-color: #ff6347;
+    color: white;
 }
 
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .carousel-container {
+        padding: 20px 40px;
+    }
+
+    .card {
+        width: 260px;
+    }
+
+    .card-image {
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-container {
+        padding: 20px 30px;
+    }
+
+    .card {
+        width: 220px;
+    }
+
+    .card-image {
+        height: 160px;
+    }
+
+    button.prev,
+    button.next {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+}
 
 /* Hide scrollbar */
 .carousel::-webkit-scrollbar {
@@ -839,7 +1183,8 @@ button:hover {
     }
 
     .card {
-        min-width: 80%; /* Cards take 80% width on small screens */
+        min-width: 80%;
+        /* Cards take 80% width on small screens */
     }
 
     button.prev,
@@ -851,7 +1196,8 @@ button:hover {
 
 @media (max-width: 480px) {
     .card {
-        min-width: 90%; /* Cards take 90% width on mobile screens */
+        min-width: 90%;
+        /* Cards take 90% width on mobile screens */
     }
 
     button.prev,
@@ -860,12 +1206,13 @@ button:hover {
         padding: 5px;
     }
 }
+
 .footer-container {
     background-color: #fff;
     padding: 40px 20px;
-    max-width: 1200px;
     margin: 0 auto;
 }
+
 .subscribe-section {
     display: flex;
     justify-content: space-between;
@@ -874,16 +1221,19 @@ button:hover {
     padding-bottom: 30px;
     margin-bottom: 30px;
 }
+
 .subscribe-form {
     width: 100%;
     max-width: 500px;
 }
+
 .subscribe-form label {
     font-weight: 600;
     color: orange;
     margin-bottom: 10px;
     display: block;
 }
+
 .form-container {
     display: flex;
     border: 1px solid orange;
@@ -891,6 +1241,7 @@ button:hover {
     overflow: hidden;
     background-color: #faf8f8;
 }
+
 .subscribe-form input {
     flex-grow: 1;
     padding: 10px 15px;
@@ -898,10 +1249,12 @@ button:hover {
     outline: none;
     color: orange;
 }
+
 .subscribe-form input::placeholder {
     color: orange;
     opacity: 0.7;
 }
+
 .subscribe-form button {
     padding: 10px 20px;
     border: none;
@@ -911,13 +1264,16 @@ button:hover {
     cursor: pointer;
     transition: background-color 0.3s;
 }
+
 .subscribe-form button:hover {
     background-color: #a77c2c;
 }
+
 .social-icons {
     display: flex;
     gap: 15px;
 }
+
 .social-icons a {
     text-decoration: none;
     background-color: orange;
@@ -929,33 +1285,40 @@ button:hover {
     justify-content: center;
     transition: background-color 0.3s;
 }
+
 .social-icons a:hover {
     background-color: #a77c2c;
 }
+
 .social-icons a img {
     max-width: 20px;
     max-height: 20px;
     filter: brightness(0) invert(1);
 }
+
 .footer-links {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     padding-bottom: 30px;
 }
+
 .footer-links div {
     display: flex;
     flex-direction: column;
 }
+
 .footer-links h4 {
     color: orange;
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 15px;
 }
+
 .footer-links h4 a {
     color: orange;
 }
+
 .footer-links a {
     text-decoration: none;
     color: orange;
@@ -963,9 +1326,11 @@ button:hover {
     margin-bottom: 8px;
     transition: color 0.3s;
 }
+
 .footer-links a:hover {
     color: #a77c2c;
 }
+
 .footer-bottom {
     display: flex;
     justify-content: space-between;
@@ -975,21 +1340,25 @@ button:hover {
     font-size: 14px;
     color: orange;
 }
+
 .footer-bottom a {
     text-decoration: none;
     color: orange;
     margin-left: 15px;
     transition: color 0.3s;
 }
+
 .footer-bottom a:hover {
     color: orange;
 }
+
 .footer-logo {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px 0;
 }
+
 .footer-logo img {
     max-width: 200px;
     height: auto;
@@ -1000,22 +1369,27 @@ button:hover {
     .footer-container {
         padding: 20px;
     }
+
     .subscribe-section {
         flex-direction: column;
         align-items: flex-start;
         gap: 20px;
     }
+
     .footer-links {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
+
     .footer-bottom {
         flex-direction: column;
         text-align: center;
     }
+
     .footer-bottom div {
         margin-top: 10px;
     }
+
     .social-icons {
         width: 100%;
         justify-content: flex-start;
@@ -1027,9 +1401,11 @@ button:hover {
     .footer-links {
         grid-template-columns: 1fr;
     }
+
     .form-container {
         flex-direction: column;
     }
+
     .subscribe-form button {
         width: 100%;
         margin-top: 10px;

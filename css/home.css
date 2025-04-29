@@ -296,12 +296,11 @@ body {
     }
 }
 
-/* Hide by default */
 .mobile-account {
     display: none;
 }
 
-/* Hero Section */
+
 .hero {
     position: relative;
     width: 100%;
@@ -354,13 +353,7 @@ body {
     }
 }
 
-/* Underline */
-.underline {
-    width: 80px;
-    height: 3px;
-    background: #c89f5d;
-    margin: 10px auto 20px;
-}
+
 
 /* Buttons */
 .buttons {
@@ -518,9 +511,6 @@ p {
     transition: color 0.3s;
 }
 
-.menu div:hover {
-    color: gold;
-}
 
 .read-more {
     display: inline-block;
@@ -916,6 +906,8 @@ p {
 /* Right Image */
 .announcement-image {
     flex: 1;
+    height: 10%;
+    max-width: 400px;
     display: flex;
     justify-content: flex-end;
 }

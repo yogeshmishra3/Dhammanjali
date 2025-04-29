@@ -586,7 +586,7 @@ body {
 .footer-container {
     background-color: #fff;
     padding: 40px 20px;
- 
+
     margin: 0 auto;
 }
 
@@ -864,5 +864,87 @@ body {
 
     .usp-item {
         max-width: 100%;
+    }
+}
+
+.tagline-section {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 50px 0;
+ 
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tagline-title {
+    font-size: 2rem;
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.tagline-subtitle {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #34495e;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+.tagline-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.tagline-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 25px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.tagline-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    color: #3498db;
+    margin-bottom: 15px;
+}
+
+.tagline-card h3 {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.tagline-card p {
+    color: #7f8c8d;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .tagline-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tagline-card {
+        max-width: 100%;
+    }
+
+    .tagline-title {
+        font-size: 2rem;
     }
 }
