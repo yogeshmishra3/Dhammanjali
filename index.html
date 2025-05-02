@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -13,7 +13,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <img src="/assets/dhammalogo.png" alt="Logo">
+                <img src="assets/dhammalogo.png" alt="Logo">
             </div>
 
             <ul class="nav-menu">
@@ -25,16 +25,17 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a href="#" class="nav-link">Business <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown-menu">
-                        <a href="mart.html" class="dropdown-item"><i class="fas fa-chart-line"></i>Mart</a>
-                        <a href="cafe.html" class="dropdown-item"><i class="fas fa-coins"></i>Cafe</a>
-                        <a href="real.html" class="dropdown-item"><i class="fas fa-search-dollar"></i>Real Estate</a>
-                        <a href="medical.html" class="dropdown-item"><i class="fas fa-laptop-code"></i>Medical
-                            Devices</a>
-                        <a href="charity.html" class="dropdown-item"><i class="fas fa-cogs"></i>Charity</a>
-                        <a href="index.html" class="dropdown-item"><i class="fas fa-shield-alt"></i>Dhammanjali
-                            Foundation</a>
-                    </div>
+                    <ul class="dropdown-menu">
+                        <li><a href="mart.html" class="dropdown-item"><i class="fas fa-chart-line"></i> Mart</a></li>
+                        <li><a href="cafe.html" class="dropdown-item"><i class="fas fa-coins"></i> Cafe</a></li>
+                        <li><a href="real.html" class="dropdown-item"><i class="fas fa-search-dollar"></i> Real
+                                Estate</a></li>
+                        <li><a href="medical.html" class="dropdown-item"><i class="fas fa-laptop-code"></i> Medical
+                                Devices</a></li>
+                        <li><a href="charity.html" class="dropdown-item"><i class="fas fa-cogs"></i> Charity</a></li>
+                        <li><a href="index.html" class="dropdown-item"><i class="fas fa-shield-alt"></i> Dhammanjali
+                                Foundation</a></li>
+                    </ul>
                 </li>
                 <li class="nav-item">
                     <a href="gallery.html" class="nav-link">Gallery</a>
@@ -47,12 +48,7 @@
                 </li>
 
                 <!-- Mobile account button -->
-                <div class="account-container mobile-account">
-                    <button class="account-btn">
-                        <i class="fas fa-user-circle"></i>
-                        Account
-                    </button>
-                </div>
+
             </ul>
 
             <!-- Desktop account button -->
@@ -68,6 +64,306 @@
         </div>
     </nav>
 
+    <div class="hero">
+        <!-- Background Video -->
+        <video autoplay muted loop id="background-video">
+            <source src="assets/Reliance-Homepage-Desktop_2.mp4" type="video/mp4">
+        </video>
+
+        <!-- Dark Overlay -->
+        <div class="overlay"></div>
+
+        <!-- Content -->
+        <div class="hero-content">
+            <h1>Growth is Life</h1>
+            <div class="underline"></div>
+            <div class="buttons">
+                <a href="#" class="btn">about us →</a>
+                <a href="#" class="btn">our history →</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- we care -->
+    <div class="we-care-section">
+        <img src="assets/we-care.png" alt="WE CARE" class="we-care-image">
+        <p class="we-care-text">
+            Reliance Industries Limited is a Fortune 500® company and the largest private sector corporation in India.
+        </p>
+    </div>
+
+    <!-- image content slide -->
+    <div class="container" id="background" style="background-image: url('assets/energy.webp');">
+        <div class="content" id="content">
+            <h1>Energy</h1>
+            <p>
+                Our quest to make India energy-sufficient led us to become one of the largest
+                oil & gas exploration and production players in India. Our refinery at Jamnagar
+                is the world's largest, integrated, single-location refining complex. It has transformed India from
+                being a net importer of petroleum products to a net exporter.
+            </p>
+            <p>
+                Today, Reliance is among the first companies globally to adopt an Oil-to-Chemicals (O2C) strategy
+                to produce the chemical building blocks of a circular economy and integrate it with
+                sustainable downstream derivatives, useful chemicals, and new materials.
+            </p>
+            <a href="#" class="read-more">Read More →</a>
+        </div>
+    </div>
+
+    <!-- foundation -->
+    <div class="foundation-container">
+        <div class="text-foundation">
+            <p>
+                Established as part of our community commitment, <b>DHAMMANJALI Foundation</b> works to support
+                local communities through various social initiatives focused on education, skill development,
+                and environmental sustainability. Our foundation has positively impacted the lives of
+                <b>thousands of families</b> in the regions where we operate.
+            </p>
+            <a href="#" class="read-more">Read more →</a>
+        </div>
+        <div class="image-foundation">
+            <img src="assets/1_lOI30EudVkLO4P5cCgXL5g.jpg" alt="Children with Nita Ambani" class="slideshow">
+            <img src="assets/0.25794500_1645773147_istock-870402320.jpg" alt="student" class="slideshow"
+                style="opacity: 0;">
+            <img src="assets/shutterstock_497643985.jpg" alt="shutterdtock" class="slideshow" style="opacity: 0;">
+            <img src="assets/pexels-photo-1509428-min.jpeg" alt="pexel" class="slideshow" style="opacity: 0;">
+            <img src="assets/th (8).jpeg" alt="puzzel" class="slideshow" style="opacity: 0;">
+        </div>
+    </div>
+
+    <!-- Content Section -->
+    <div class="show-container">
+        <div class="tabs">
+            <div class="tab active" onclick="changeTab('sustainability', '/assets/soalr panel.jpeg')">Sustainability
+            </div>
+            <div class="tab" onclick="changeTab('innovation', '/assets/logo_jio.jpg')">Innovation</div>
+            <div class="tab" onclick="changeTab('impact', '/assets/ril-press_0.jpg')">Our Impact</div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="content-container">
+                <div id="sustainability" class="box-content active">
+                    <h1>Corporate Sustainability</h1>
+                    <p>Our growth strategy is defined by our business acumen and corporate responsibility.
+                        Our commitment to sustainable value-creation demonstrates the principle that we care for our
+                        people and our planet.
+                    </p>
+                    <p>Our mission remains to continue growing as a responsible organisation that enriches lives, while
+                        striving for
+                        economic and ecological sustainability. We are on the path to transforming our legacy businesses
+                        to net-zero
+                        carbon operations, while ensuring sustainability through circular materials. Reliance has set an
+                        ambitious
+                        target to become a net-zero carbon company by 2035.
+                    </p>
+                    <button class="read-more">Read More →</button>
+                </div>
+
+                <div id="innovation" class="box-content">
+                    <h1>Innovation</h1>
+                    <p>We constantly strive to innovate and bring cutting-edge solutions Our spectacular growth story
+                        is engineered by innovation and the new paradigms we set every single day to create a better
+                        future for all.
+                    </p>
+                    <p>Our innovations touch many facets of life in India - be it digital services,
+                        transportation, retail, or healthcare. Our bold ambitions for Reliance and for
+                        India push us to create an innovation agenda that is even bolder, ensuring that
+                        the next wave of growth will remain innovation-led. Reliance has made significant
+                        investments in cutting-edge technologies such as artificial intelligence, blockchain,
+                        and Internet of Things (IoT), and has also launched numerous initiatives to drive
+                        innovation across its various business units.
+                    </p>
+                    <button class="read-more">Read More →</button>
+                </div>
+
+                <div id="impact" class="box-content">
+                    <h1>Our Impact</h1>
+                    <p>Our initiatives have a profound impact on society and the environment We have
+                        generated employment and immense societal value, committed resources and ideas to a digital
+                        revolution,
+                        built world-class manufacturing assets that produce clean fuels and materials of the future, and
+                        created
+                        a consumer-focused, integrated retail ecosystem for India.
+                    </p>
+                    <p>Reliance has made significant investments in cutting-edge technologies We have also joined forces
+                        with the best in the world, to bring the best of the world to India. At Reliance, we are on a
+                        pursuit
+                        of self-reliant, sustainable growth and are stepping up to the challenge of taking on the future
+                        and making it India's own.
+                    </p>
+                    <button class="read-more">Read More →</button>
+                </div>
+            </div>
+
+            <div class="image-container">
+                <img id="tab-image" src="assets/soalr panel.jpeg" alt="Sustainability">
+            </div>
+        </div>
+    </div>
+
+    <section class="announcements">
+        <h1 class="title">Announcements</h1>
+        <div class="announcement-container">
+            <div class="announcement-content">
+                <h2>DHAMMANJALI INDIA PRIVATE LIMITED - Your One-Stop Shopping Destination</h2>
+                <p class="meta">
+                    <span class="author">DHAMMANJALI COMMUNICATION</span> | <span class="date">29 APR, 2025</span>
+                </p>
+                <p>
+                    Discover our diverse range of high-quality products including home appliances, gift items, kids'
+                    items,
+                    utensils, stationery, and more. Visit us today for a convenient shopping experience at competitive
+                    prices!
+                </p>
+            </div>
+            <div class="announcement-image">
+                <img src="assets/DA.jpeg" alt="DHAMMANJALI Announcement">
+            </div>
+        </div>
+    </section>
+
+    <section class="announcements">
+        <div class="announcement-grid">
+            <!-- First Announcement -->
+            <div class="announcement-card">
+                <img src="assets/dhammalogo.png" alt="DHAMMANJALI Logo" class="announcement-logo">
+                <h3>DHAMMANJALI Announces Grand Summer Sale with Up to 50% Off</h3>
+                <div class="announcement-meta">
+                    <span class="author">DHAMMANJALI COMMUNICATION</span> | <span class="date">29 APR, 2025</span>
+                </div>
+            </div>
+
+            <!-- Second Announcement -->
+            <div class="announcement-card">
+                <img src="assets/soalr panel.jpeg" alt="DHAMMANJALI Logo" class="announcement-logo">
+                <h3>New Kitchen Appliances Collection Now Available at All Stores</h3>
+                <div class="announcement-meta">
+                    <span class="author">DHAMMANJALI COMMUNICATION</span> | <span class="date">15 MAR, 2025</span>
+                </div>
+            </div>
+
+            <!-- Third Announcement -->
+            <div class="announcement-card">
+                <div class="multiple-logos">
+                    <img src="assets/dhammalogo.png" alt="DHAMMANJALI Partnership Logo">
+                </div>
+                <h3>DHAMMANJALI Partners with Local Artisans to Launch Exclusive Handicraft Collection</h3>
+                <div class="announcement-meta">
+                    <span class="author">DHAMMANJALI COMMUNICATION</span> | <span class="date">22 FEB, 2025</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="more-announcements">
+            <button>More announcements →</button>
+        </div>
+    </section>
+
+    <div class="agm-banner">
+        <img src="assets/BannerDhamma.jpeg" alt="47th Annual General Meeting" class="agm-image">
+    </div>
+
+    <div class="agm-highlight">
+        <h2>Key Highlights from AGM – Perspective for Investors | Aug 29, 2024</h2>
+        <button class="download-btn">Download Now →</button>
+    </div>
+
+    <!-- layout -->
+    <div class="layout-container">
+        <div class="layout">
+            <div class="text-layout">
+                <h1>Life at DHAMMANJALI</h1>
+                <h2>Why work with us?</h2>
+                <p>
+                    DHAMMANJALI INDIA PRIVATE LIMITED is a growing retail leader offering diverse career opportunities.
+                    With a supportive, innovative, and customer-focused environment, we foster professional
+                    growth and personal development for all our team members.
+                </p>
+                <div class="buttons">
+                    <button>meet our team →</button>
+                    <button>join our family →</button>
+                </div>
+            </div>
+            <div class="image-grid">
+                <img src="https://www.ril.com/themes/custom/reliance/images/career-img3.2.png" alt="Award">
+                <img src="https://www.ril.com/themes/custom/reliance/images/awards-img1.2.png" alt="Best Employer">
+                <img src="https://www.ril.com/themes/custom/reliance/images/career-img4.2.png" alt="Team">
+                <img src="https://www.ril.com/themes/custom/reliance/images/career-img2.2.png" alt="Work">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-container">
+        <!-- Subscribe & Social Media -->
+        <div class="subscribe-section">
+            <div class="subscribe-form">
+                <label for="email">Subscribe to our news alerts</label>
+                <div class="form-container">
+                    <input type="email" id="email" placeholder="Email Id">
+                    <button>Subscribe</button>
+                </div>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/relianceIndustriestLimited" target="_blank" aria-label="Facebook">
+                    <img src="https://rilstaticasset.akamaized.net/sites/default/files/2022-08/facebook-icon.svg"
+                        alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/relianceupdates/" target="_blank" aria-label="Instagram">
+                    <img src="https://rilstaticasset.akamaized.net/sites/default/files/2022-11/insta-icon.svg"
+                        alt="Instagram">
+                </a>
+                <a href="https://twitter.com/RIL" target="_blank" aria-label="Twitter">
+                    <img src="https://rilstaticasset.akamaized.net/sites/default/files/2023-09/twitter-icon%20%281%29.svg"
+                        alt="Twitter">
+                </a>
+                <a href="https://www.linkedin.com/company/reliance" target="_blank" aria-label="LinkedIn">
+                    <img src="https://rilstaticasset.akamaized.net/sites/default/files/2022-08/linkedin-icon.svg"
+                        alt="LinkedIn">
+                </a>
+                <a href="https://www.youtube.com/user/flameoftruth2014" target="_blank" aria-label="YouTube">
+                    <img src="https://rilstaticasset.akamaized.net/sites/default/files/2022-08/youtube-icon.svg"
+                        alt="YouTube">
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer Links -->
+        <div class="footer-links">
+            <div>
+                <h4>About</h4>
+                <a href="about.html">About Us</a>
+            </div>
+            <div>
+                <h4>Businesses</h4>
+                <a class="dropdown-item" href="mart.html">Mart</a>
+                <a class="dropdown-item" href="cafe.html">Cafe</a>
+                <a class="dropdown-item" href="real.html">Real Estate</a>
+                <a class="dropdown-item" href="medical.html">Medical Devices</a>
+                <a class="dropdown-item" href="charity.html">Charity</a>
+                <a class="dropdown-item" href="index.html">Dhammanjali Foundation</a>
+            </div>
+            <div>
+                <h4><a href="gallery.html">Gallery</a></h4>
+            </div>
+            <div>
+                <h4><a href="testomonials.html">Testimonials</a></h4>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <span>© 2025 Reliance Industries Limited. All rights reserved.</span>
+            <div>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Legal Notice</a>
+                <a href="#">Report Security Issue</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const hamburger = document.querySelector('.hamburger');
@@ -122,334 +418,52 @@
                     });
                 }
             });
+
+            // Tab functionality
+            function changeTab(tabId, imageSrc) {
+                // Hide all tab contents
+                document.querySelectorAll('.box-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+
+                // Show selected tab content
+                document.getElementById(tabId).classList.add('active');
+
+                // Update tab image
+                document.getElementById('tab-image').src = imageSrc;
+
+                // Update active tab
+                document.querySelectorAll('.tab').forEach(tab => {
+                    tab.classList.remove('active');
+                });
+                event.currentTarget.classList.add('active');
+            }
+
+            // Make changeTab function available globally
+            window.changeTab = changeTab;
+
+            // Slideshow functionality for foundation section
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.slideshow');
+
+            function showSlide(n) {
+                slides.forEach(slide => {
+                    slide.style.opacity = 0;
+                });
+
+                currentSlide = (n + slides.length) % slides.length;
+                slides[currentSlide].style.opacity = 1;
+            }
+
+            function nextSlide() {
+                showSlide(currentSlide + 1);
+            }
+
+            // Start slideshow
+            showSlide(0);
+            setInterval(nextSlide, 3000);
         });
     </script>
-
-    <div class="hero">
-        <!-- Background Video -->
-        <video autoplay muted loop id="background-video">
-            <source src="assets/Reliance-Homepage-Desktop_2.mp4" type="video/mp4">
-
-        </video>
-
-        <!-- Dark Overlay -->
-        <div class="overlay"></div>
-
-        <!-- Content -->
-        <div class="hero-content">
-            <h1>Growth is Life</h1>
-            <div class="underline"></div>
-            <div class="buttons">
-                <a href="#" class="btn">about us →</a>
-                <a href="#" class="btn">our history →</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- we care -->
-    <div class="we-care-section">
-        <img src="assets/we-care.png" alt="WE CARE" class="we-care-image">
-        <p class="we-care-text">
-            Reliance Industries Limited is a Fortune 500® company and the largest private sector corporation in India.
-        </p>
-    </div>
-    <!-- image content slide -->
-    <div class="container" id="background" style="background-image: url('assets/energy.webp');">
-        <div class="content" id="content">
-            <h1>Energy</h1>
-            <p>
-                Our quest to make India energy-sufficient led us to become one of the largest
-                oil & gas exploration and production players in India. Our refinery at Jamnagar
-                is the world’s largest, integrated, single-location refining complex. It has transformed India from
-                being a net importer of petroleum products to a net exporter.
-            </p>
-            <p>
-                Today, Reliance is among the first companies globally to adopt an Oil-to-Chemicals (O2C) strategy
-                to produce the chemical building blocks of a circular economy and integrate it with
-                sustainable downstream derivatives, useful chemicals, and new materials.
-            </p>
-            <a href="#" class="read-more">Read More →</a>
-        </div>
-        <!-- <div class="menu">
-            <div onmouseover="showEnergy()">ENERGY</div>
-            <div onmouseover="showPetrochemicals()">PETROCHEMICALS</div>
-            <div onmouseover="showRetail()">RETAIL</div>
-            <div onmouseover="showdigitalservice()">DIGITAL SERVICE-JIO</div>
-            <div onmouseover="shownewenergy()">NEW ENERGY</div>
-            <div onmouseover="showmediaentertainment()">MEDIA & ENTERTAIMENT</div>
-        </div> -->
-    </div>
-
-    <!-- foundation -->
-    <div class="foundation-container">
-        <div class="text-foundation">
-            <!-- <img src="assets/career-img3.2 (2).png" alt="Reliance Foundation"> -->
-            <p>
-                Established as part of our community commitment, <b>DHAMMANJALI Foundation</b> works to support
-                local communities through various social initiatives focused on education, skill development,
-                and environmental sustainability. Our foundation has positively impacted the lives of
-                <b>thousands of families</b> in the regions where we operate.
-            </p>
-            <a href="#" class="read-more">Read more →</a>
-        </div>
-        <div class="image-foundation">
-            <img src="assets/1_lOI30EudVkLO4P5cCgXL5g.jpg" alt="Children with Nita Ambani" class="slideshow">
-            <img src="assets/0.25794500_1645773147_istock-870402320.jpg" alt="student" class="slideshow"
-                style="opacity: 0;">
-            <img src="assets/shutterstock_497643985.jpg" alt="shutterdtock" class="slideshow" style="opacity: 0;">
-            <img src="assets/pexels-photo-1509428-min.jpeg" alt="pexel" class="slideshow" style="opacity: 0;">
-            <img src="assets/th (8).jpeg" alt="puzzel" class="slideshow" style="opacity: 0;">
-        </div>
-    </div>
-
-    <!-- Content Section -->
-    <div class="show-container">
-        <div class="tabs">
-            <div class="tab active" onclick="changeTab('sustainability', '/assets/soalr panel.jpeg')">Sustainability
-            </div>
-            <div class="tab" onclick="changeTab('innovation', '/assets/logo_jio.jpg')">Innovation</div>
-            <div class="tab" onclick="changeTab('impact', '/assets/ril-press_0.jpg')">Our Impact</div>
-        </div>
-
-        <div class="content-wrapper">
-            <div class="content-container">
-                <div id="sustainability" class="box-content active">
-                    <h1>Corporate Sustainability</h1>
-                    <p>Our growth strategy is defined by our business acumen and corporate responsibility
-                        responsibility.
-                        Our commitment to sustainable value-creation demonstrates the principle that we care for our
-                        people and our planet.
-                    </p>
-                    <p>Our mission remains to continue growing as a responsible organisation that enriches lives, while
-                        striving for
-                        economic and ecological sustainability. We are on the path to transforming our legacy businesses
-                        to net-zero
-                        carbon operations, while ensuring sustainability through circular materials. Reliance has set an
-                        ambitious
-                        target to become a net-zero carbon company by 2035.
-                    </p>
-                    <button class="read-more">Read More →</button>
-                </div>
-
-                <div id="innovation" class="box-content">
-                    <h1>Innovation</h1>
-                    <p>We constantly strive to innovate and bring cutting-edge solutions Our spectacular growth story
-                        is engineered by innovation and the new paradigms we set every single day to create a better
-                        future for all.
-                    </p>
-                    <p>Our innovations touch many facets of life in India – be it digital services,
-                        transportation, retail, or healthcare. Our bold ambitions for Reliance and for
-                        India push us to create an innovation agenda that is even bolder, ensuring that
-                        the next wave of growth will remain innovation-led. Reliance has made significant
-                        investments in cutting-edge technologies such as artificial intelligence, blockchain,
-                        and Internet of Things (IoT), and has also launched numerous initiatives to drive
-                        innovation across its various business units.
-                    </p>
-                    <button class="read-more">Read More →</button>
-                </div>
-
-                <div id="impact" class="box-content">
-                    <h1>Our Impact</h1>
-                    <p>Our initiatives have a profound impact on society and the environment We have
-                        generated employment and immense societal value, committed resources and ideas to a digital
-                        revolution,
-                        built world-class manufacturing assets that produce clean fuels and materials of the future, and
-                        created
-                        a consumer-focused, integrated retail ecosystem for India.
-                    </p>
-                    <p>Reliance has made significant investments in cutting-edge technologies We have also joined forces
-                        with the best in the world, to bring the best of the world to India. At Reliance, we are on a
-                        pursuit
-                        of self-reliant, sustainable growth and are stepping up to the challenge of taking on the future
-                        and making it India’s own.
-                    </p>
-                    <button class="read-more">Read More →</button>
-                </div>
-            </div>
-
-            <div class="image-container">
-                <img id="tab-image" src="assets/soalr panel.jpeg" alt="Sustainability">
-            </div>
-        </div>
-    </div>
-    <section class="announcements">
-        <h1 class="title">Announcements</h1>
-        <div class="announcement-container">
-            <div class="announcement-content">
-                <h2>DHAMMANJALI INDIA PRIVATE LIMITED - Your One-Stop Shopping Destination</h2>
-                <p class="meta">
-                    <span class="author">DHAMMANJALI COMMUNICATION</span> | <span class="date">29 APR, 2025</span>
-                </p>
-                <p>
-                    Discover our diverse range of high-quality products including home appliances, gift items, kids'
-                    items,
-                    utensils, stationery, and more. Visit us today for a convenient shopping experience at competitive
-                    prices!
-                </p>
-            </div>
-            <div class="announcement-image">
-                <img src="./assets/DA.jpeg" alt="DHAMMANJALI Announcement">
-            </div>
-        </div>
-    </section>
-
-    <section class="announcements">
-        <div class="announcement-grid">
-            <!-- First Announcement -->
-            <div class="announcement-card">
-                <img src="./assets/dhammalogo.png" alt="DHAMMANJALI Logo" class="announcement-logo">
-                <h3>DHAMMANJALI Announces Grand Summer Sale with Up to 50% Off</h3>
-                <div class="announcement-meta">
-                    <span class="author">DHAMMANJALI COMMUNICATION</span> | <span class="date">29 APR, 2025</span>
-                </div>
-            </div>
-
-            <!-- Second Announcement -->
-            <div class="announcement-card">
-                <img src="./assets/soalr panel.jpeg" alt="DHAMMANJALI Logo" class="announcement-logo">
-                <h3>New Kitchen Appliances Collection Now Available at All Stores</h3>
-                <div class="announcement-meta">
-                    <span class="author">DHAMMANJALI COMMUNICATION</span> | <span class="date">15 MAR, 2025</span>
-                </div>
-            </div>
-
-            <!-- Third Announcement -->
-            <div class="announcement-card">
-                <div class="multiple-logos">
-                    <img src="/assets/dhammalogo.png" alt="DHAMMANJALI Partnership Logo">
-                </div>
-                <h3>DHAMMANJALI Partners with Local Artisans to Launch Exclusive Handicraft Collection</h3>
-                <div class="announcement-meta">
-                    <span class="author">DHAMMANJALI COMMUNICATION</span> | <span class="date">22 FEB, 2025</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="more-announcements">
-            <button>More announcements →</button>
-        </div>
-    </section>
-    <div class="agm-banner">
-        <img src="assets/BannerDhamma.jpeg" alt="47th Annual General Meeting" class="agm-image">
-    </div>
-
-    <div class="agm-highlight">
-        <h2>Key Highlights from AGM – Perspective for Investors | Aug 29, 2024</h2>
-        <button class="download-btn">Download Now →</button>
-    </div>
-    <!-- Investor Documents Section -->
-
-
-    <!-- layout -->
-    <div class="layout-container">
-        <div class="layout">
-            <div class="text-layout">
-                <h1>Life at DHAMMANJALI</h1>
-                <h2>Why work with us?</h2>
-                <p>
-                    DHAMMANJALI INDIA PRIVATE LIMITED is a growing retail leader offering diverse career opportunities.
-                    With a supportive, innovative, and customer-focused environment, we foster professional
-                    growth and personal development for all our team members.
-                </p>
-                <div class="buttons">
-                    <button>meet our team →</button>
-                    <button>join our family →</button>
-                </div>
-            </div>
-            <div class="image-grid">
-                <img src="https://www.ril.com/themes/custom/reliance/images/career-img3.2.png" alt="Award">
-                <img src="https://www.ril.com/themes/custom/reliance/images/awards-img1.2.png" alt="Best Employer">
-                <img src="https://www.ril.com/themes/custom/reliance/images/career-img4.2.png" alt="Team">
-                <img src="https://www.ril.com/themes/custom/reliance/images/career-img2.2.png" alt="Work">
-
-            </div>
-        </div>
-    </div>
-
-    <!-- form -->
-
-
-    <div class="footer-container">
-        <!-- Subscribe & Social Media -->
-        <div class="subscribe-section">
-            <div class="subscribe-form">
-                <label for="email">Subscribe to our news alerts</label>
-                <div class="form-container">
-                    <input type="email" id="email" placeholder="Email Id">
-                    <button>Subscribe</button>
-                </div>
-            </div>
-            <div class="social-icons">
-                <a href="https://www.facebook.com/relianceIndustriestLimited" target="_blank" aria-label="Facebook">
-                    <img src="https://rilstaticasset.akamaized.net/sites/default/files/2022-08/facebook-icon.svg"
-                        alt="Facebook">
-                </a>
-                <a href="https://www.instagram.com/relianceupdates/" target="_blank" aria-label="Instagram">
-                    <img src="https://rilstaticasset.akamaized.net/sites/default/files/2022-11/insta-icon.svg"
-                        alt="Instagram">
-                </a>
-                <a href="https://twitter.com/RIL" target="_blank" aria-label="Twitter">
-                    <img src="https://rilstaticasset.akamaized.net/sites/default/files/2023-09/twitter-icon%20%281%29.svg"
-                        alt="Twitter">
-                </a>
-                <a href="https://www.linkedin.com/company/reliance" target="_blank" aria-label="LinkedIn">
-                    <img src="https://rilstaticasset.akamaized.net/sites/default/files/2022-08/linkedin-icon.svg"
-                        alt="LinkedIn">
-                </a>
-                <a href="https://www.youtube.com/user/flameoftruth2014" target="_blank" aria-label="YouTube">
-                    <img src="https://rilstaticasset.akamaized.net/sites/default/files/2022-08/youtube-icon.svg"
-                        alt="YouTube">
-                </a>
-            </div>
-        </div>
-
-        <!-- Footer Links -->
-        <div class="footer-links">
-            <div>
-                <h4>About</h4>
-                <a href="about.html">About Us</a>
-
-            </div>
-            <div>
-                <h4>Businesses</h4>
-                <a class="dropdown-item" href="mart.html">Mart</a>
-                <a class="dropdown-item" href="cafe.html">Cafe</a>
-                <a class="dropdown-item" href="real.html">Real Estate</a>
-                <a class="dropdown-item" href="medical.html">Medical Devices</a>
-                <a class="dropdown-item" href="charity.html">Charity</a>
-                <a class="dropdown-item" href="index.html">Dhammanjali Foundation</a>
-                <!-- <a class="dropdown-item" href="#">Products(Other)</a> -->
-            </div>
-
-            <div>
-                <h4><a href="gallery.html">Gallery</a></h4>
-
-            </div>
-            <div>
-                <h4><a href="testomonials.html">Testimonials</a></h4>
-
-            </div>
-        </div>
-
-        <!-- Footer Logo -->
-        <div class="footer-logo">
-            <a href="assets/dhammalogo.png" role="reliance-logo">
-                <!-- <img src="https://rilstaticasset.akamaized.net/sites/default/files/2022-09/logo-ft.png" alt="Reliance Industries Limited"> -->
-            </a>
-        </div>
-
-        <!-- Footer Bottom -->
-        <div class="footer-bottom">
-            <span>© 2025 Reliance Industries Limited. All rights reserved.</span>
-            <div>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Legal Notice</a>
-                <a href="#">Report Security Issue</a>
-            </div>
-        </div>
-    </div>
-
-    <script src="js/home.js"></script>
 </body>
 
 </html>

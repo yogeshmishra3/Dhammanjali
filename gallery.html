@@ -15,7 +15,6 @@
         * {
             margin: 0;
             padding: 0;
-
             font-family: 'Poppins', sans-serif;
         }
 
@@ -35,11 +34,9 @@
             background-color: #f5f5f5;
         }
 
-
         .navbar {
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             background-color: var(--white);
-
         }
 
         .nav-container {
@@ -51,13 +48,11 @@
         }
 
         .nav-container {
-
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin: 0 auto;
             padding: 15px 20px;
-
         }
 
         /* Logo */
@@ -76,7 +71,6 @@
             }
         }
 
-
         .logo-text {
             font-size: 22px;
             font-weight: 700;
@@ -94,6 +88,7 @@
 
         .nav-item {
             margin: 0 12px;
+            position: relative;
         }
 
         .nav-link {
@@ -104,6 +99,8 @@
             transition: color 0.3s;
             position: relative;
             padding: 5px 0;
+            display: flex;
+            align-items: center;
         }
 
         .nav-link:hover {
@@ -133,13 +130,13 @@
         .dropdown i {
             font-size: 12px;
             margin-left: 4px;
+            transition: transform 0.3s;
         }
 
         .dropdown-menu {
             position: absolute;
-            top: 130%;
-            left: 50%;
-            transform: translateX(-50%);
+            top: 100%;
+            left: 0;
             min-width: 200px;
             background-color: var(--white);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -148,12 +145,17 @@
             opacity: 0;
             visibility: hidden;
             transition: all 0.3s ease;
+            z-index: 1000;
         }
 
         .dropdown:hover .dropdown-menu {
             opacity: 1;
             visibility: visible;
             top: 100%;
+        }
+
+        .dropdown:hover .nav-link i {
+            transform: rotate(180deg);
         }
 
         .dropdown-item {
@@ -239,7 +241,7 @@
 
             .nav-menu {
                 position: fixed;
-                z-index: 1;
+                z-index: 1000;
                 top: 70px;
                 left: -100%;
                 width: 100%;
@@ -267,6 +269,7 @@
                 display: inline-block;
                 width: 100%;
                 text-align: left;
+                justify-content: space-between;
             }
 
             .nav-link::after {
@@ -293,6 +296,10 @@
             .dropdown.active .dropdown-menu {
                 max-height: 500px;
                 padding: 10px 0;
+            }
+
+            .dropdown.active .nav-link i {
+                transform: rotate(180deg);
             }
 
             .dropdown-item {
@@ -364,7 +371,6 @@
                 gap: 10px;
             }
         }
-
 
         .footer-container {
             background-color: #fff;
@@ -524,7 +530,6 @@
             filter: hue-rotate(0deg) saturate(5) brightness(0.8);
         }
 
-
         @media screen and (max-width: 768px) {
             .footer-container {
                 padding: 20px;
@@ -587,7 +592,6 @@
             gap: 25px;
             padding: 40px;
             width: 90%;
-
             margin: auto;
             background: #ffffff;
             margin-bottom: 5%;
@@ -629,19 +633,19 @@
                 <li class="nav-item">
                     <a href="about.html" class="nav-link">About</a>
                 </li>
-            <li class="nav-item dropdown">
-                <a href="#" class="nav-link">Business <i class="fas fa-chevron-down"></i></a>
-                <div class="dropdown-menu">
-                    <a href="mart.html" class="dropdown-item"><i class="fas fa-chart-line"></i>Mart</a>
-                    <a href="cafe.html" class="dropdown-item"><i class="fas fa-coins"></i>Cafe</a>
-                    <a href="real.html" class="dropdown-item"><i class="fas fa-search-dollar"></i>Real Estate</a>
-                    <a href="medical.html" class="dropdown-item"><i class="fas fa-laptop-code"></i>Medical
-                        Devices</a>
-                    <a href="charity.html" class="dropdown-item"><i class="fas fa-cogs"></i>Charity</a>
-                    <a href="index.html" class="dropdown-item"><i class="fas fa-shield-alt"></i>Dhammanjali
-                        Foundation</a>
-                </div>
-            </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Business <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="mart.html" class="dropdown-item"><i class="fas fa-chart-line"></i>Mart</a>
+                        <a href="cafe.html" class="dropdown-item"><i class="fas fa-coins"></i>Cafe</a>
+                        <a href="real.html" class="dropdown-item"><i class="fas fa-search-dollar"></i>Real Estate</a>
+                        <a href="medical.html" class="dropdown-item"><i class="fas fa-laptop-code"></i>Medical
+                            Devices</a>
+                        <a href="charity.html" class="dropdown-item"><i class="fas fa-cogs"></i>Charity</a>
+                        <a href="index.html" class="dropdown-item"><i class="fas fa-shield-alt"></i>Dhammanjali
+                            Foundation</a>
+                    </div>
+                </li>
                 <li class="nav-item">
                     <a href="gallery.html" class="nav-link">Gallery</a>
                 </li>
@@ -690,6 +694,7 @@
             // Handle dropdown clicks in mobile view
             dropdowns.forEach(dropdown => {
                 const link = dropdown.querySelector('.nav-link');
+                const menu = dropdown.querySelector('.dropdown-menu');
 
                 link.addEventListener('click', function (e) {
                     if (window.innerWidth <= 992) {
@@ -704,6 +709,23 @@
                         });
                     }
                 });
+
+                // Desktop hover functionality
+                if (window.innerWidth > 992) {
+                    dropdown.addEventListener('mouseenter', function () {
+                        this.classList.add('active');
+                        menu.style.opacity = '1';
+                        menu.style.visibility = 'visible';
+                        menu.style.top = '100%';
+                    });
+
+                    dropdown.addEventListener('mouseleave', function () {
+                        this.classList.remove('active');
+                        menu.style.opacity = '0';
+                        menu.style.visibility = 'hidden';
+                        menu.style.top = '130%';
+                    });
+                }
             });
 
             // Close menu when clicking a menu item
@@ -717,14 +739,27 @@
             });
 
             // Handle window resize
-            window.addEventListener('resize', () => {
+            window.addEventListener('resize', function () {
                 if (window.innerWidth > 992) {
                     hamburger.classList.remove('active');
                     navMenu.classList.remove('active');
                     document.body.style.overflow = '';
 
+                    // Reset all dropdowns on desktop
                     dropdowns.forEach(dropdown => {
                         dropdown.classList.remove('active');
+                        const menu = dropdown.querySelector('.dropdown-menu');
+                        menu.style.opacity = '0';
+                        menu.style.visibility = 'hidden';
+                        menu.style.top = '130%';
+                    });
+                } else {
+                    // Reset dropdown styles for mobile
+                    dropdowns.forEach(dropdown => {
+                        const menu = dropdown.querySelector('.dropdown-menu');
+                        menu.style.opacity = '';
+                        menu.style.visibility = '';
+                        menu.style.top = '';
                     });
                 }
             });
@@ -803,13 +838,6 @@
         });
     </script>
 
-
-    <!-- <div class="upload-box">
-    <input type="file" id="fileInput"><br><br>
-    <img id="preview" src="" alt="" />
-  </div> -->
-
-
     <div class="footer-container">
         <!-- Subscribe & Social Media -->
         <div class="subscribe-section">
@@ -849,26 +877,24 @@
             <div>
                 <h4>About</h4>
                 <a href="/DM/about.html">About Us</a>
-
             </div>
             <div>
                 <h4>Businesses</h4>
-                <a class="dropdown-item" href="/bussines section/mart/mart.html">Mart</a>
-                <a class="dropdown-item" href="/bussines section/cafe/cafe.html">Cafe</a>
-                <a class="dropdown-item" href="/bussines section/real estate/real.html">Real Estate</a>
-                <a class="dropdown-item" href="/medical/medical.html">Medical Devices</a>
-                <a class="dropdown-item" href="/charity/charity.html">Charity</a>
-                <a class="dropdown-item" href="/Dhammanjali-Foundation/index.html">Dhammanjali Foundation</a>
-                <!-- <a class="dropdown-item" href="#">Products(Other)</a> -->
+                <div>
+                    <a class="dropdown-item" href="mart.html">Mart</a>
+                    <a class="dropdown-item" href="cafe.html">Cafe</a>
+                    <a class="dropdown-item" href="real.html">Real Estate</a>
+                    <a class="dropdown-item" href="medical.html">Medical Devices</a>
+                    <a class="dropdown-item" href="charity.html">Medical Devices</a>
+                    <a class="dropdown-item" href="index.html">Dhammanjali Foundation</a>
+                </div>
             </div>
 
             <div>
                 <h4><a href="/index/homepage/home.html">Gallery</a></h4>
-
             </div>
             <div>
                 <h4><a href="/testomoni/testomonials.html">Testimonials</a></h4>
-
             </div>
         </div>
 
@@ -890,6 +916,5 @@
         </div>
     </div>
 </body>
-<!-- <script type="module" src="cloudinary.js"></script> -->
 
 </html>
