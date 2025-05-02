@@ -4,10 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DreamHome Real Estate</title>
-    <link rel="stylesheet" href="./css/real.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/swiper/9.3.2/swiper-bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/swiper/9.3.2/swiper-bundle.min.css">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/real.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
@@ -15,7 +13,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <img src="./assets/dhammalogo.png" alt="DreamHome Logo">
+                <img src="assets/dhammalogo.png" alt="Logo">
             </div>
 
             <ul class="nav-menu">
@@ -26,32 +24,31 @@
                     <a href="about.html" class="nav-link">About</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link">Properties <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown-menu">
-                        <a href="#" class="dropdown-item"><i class="fas fa-home"></i> Residential</a>
-                        <a href="#" class="dropdown-item"><i class="fas fa-building"></i> Commercial</a>
-                        <a href="#" class="dropdown-item"><i class="fas fa-map-marker-alt"></i> Plots/Land</a>
-                        <a href="#" class="dropdown-item"><i class="fas fa-city"></i> New Developments</a>
-                        <a href="#" class="dropdown-item"><i class="fas fa-door-open"></i> Rentals</a>
-                    </div>
+                    <a href="#" class="nav-link">Business <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="mart.html" class="dropdown-item"><i class="fas fa-chart-line"></i> Mart</a></li>
+                        <li><a href="cafe.html" class="dropdown-item"><i class="fas fa-coins"></i> Cafe</a></li>
+                        <li><a href="real.html" class="dropdown-item"><i class="fas fa-search-dollar"></i> Real
+                                Estate</a></li>
+                        <li><a href="medical.html" class="dropdown-item"><i class="fas fa-laptop-code"></i> Medical
+                                Devices</a></li>
+                        <li><a href="charity.html" class="dropdown-item"><i class="fas fa-cogs"></i> Charity</a></li>
+                        <li><a href="index.html" class="dropdown-item"><i class="fas fa-shield-alt"></i> Dhammanjali
+                                Foundation</a></li>
+                    </ul>
                 </li>
                 <li class="nav-item">
                     <a href="gallery.html" class="nav-link">Gallery</a>
                 </li>
                 <li class="nav-item">
-                    <a href="testimonials.html" class="nav-link">Testimonials</a>
+                    <a href="testomonials.html" class="nav-link">Testimonials</a>
                 </li>
                 <li class="nav-item">
                     <a href="contact.html" class="nav-link">Contact Us</a>
                 </li>
 
                 <!-- Mobile account button -->
-                <div class="account-container mobile-account">
-                    <button class="account-btn">
-                        <i class="fas fa-user-circle"></i>
-                        Account
-                    </button>
-                </div>
+
             </ul>
 
             <!-- Desktop account button -->
@@ -66,322 +63,325 @@
             </div>
         </div>
     </nav>
+<!-- Main Slider -->
+<div class="slider-container">
+    <div class="slider">
+        <div class="slide"><img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg"
+                alt="Luxury Home"></div>
+        <div class="slide"><img src="https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg"
+                alt="Modern Apartment"></div>
+        <div class="slide"><img src="https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg"
+                alt="Residential Area"></div>
+    </div>
+    <div class="buttons">
+        <button onclick="prevSlide()">&#10094;</button>
+        <button onclick="nextSlide()">&#10095;</button>
+    </div>
+</div>
 
-    <!-- Main Slider -->
+<!-- Real Estate Options Section -->
+<div class="real-estate-options">
+    <div class="container">EXPLORE YOUR REAL ESTATE OPTIONS</div>
     <div class="slider-container">
-        <div class="slider">
-            <div class="slide"><img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg"
-                    alt="Luxury Home"></div>
-            <div class="slide"><img src="https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg"
-                    alt="Modern Apartment"></div>
-            <div class="slide"><img src="https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg"
-                    alt="Residential Area"></div>
-        </div>
-        <div class="buttons">
-            <button onclick="prevSlide()">&#10094;</button>
-            <button onclick="nextSlide()">&#10095;</button>
-        </div>
-    </div>
-
-    <!-- Real Estate Options Section -->
-    <div class="real-estate-options">
-        <div class="container">EXPLORE YOUR REAL ESTATE OPTIONS</div>
-        <div class="slider-container">
-            <div class="swiper-button-prev"></div>
-            <!-- Real Estate Category Slider -->
-            <div class="estate-slider">
-                <div class="estate-slider__track">
-                    <div class="estate-card">
-                        <div class="estate-card__image-container">
-                            <img src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg"
-                                alt="Buying a home" class="estate-card__image">
-                        </div>
-                        <div class="estate-card__caption">Buying a home</div>
+        <div class="swiper-button-prev"></div>
+        <!-- Real Estate Category Slider -->
+        <div class="estate-slider">
+            <div class="estate-slider__track">
+                <div class="estate-card">
+                    <div class="estate-card__image-container">
+                        <img src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg" alt="Buying a home"
+                            class="estate-card__image">
                     </div>
-
-                    <div class="estate-card">
-                        <div class="estate-card__image-container">
-                            <img src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg"
-                                alt="Renting a home" class="estate-card__image">
-                        </div>
-                        <div class="estate-card__caption">Renting a home</div>
-                    </div>
-
-                    <div class="estate-card">
-                        <div class="estate-card__image-container">
-                            <span class="estate-card__badge">NEW</span>
-                            <img src="https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg"
-                                alt="Invest in Real Estate" class="estate-card__image">
-                        </div>
-                        <div class="estate-card__caption">Invest in Real Estate</div>
-                    </div>
-
-                    <div class="estate-card">
-                        <div class="estate-card__image-container">
-                            <img src="https://images.pexels.com/photos/210617/pexels-photo-210617.jpeg"
-                                alt="Sell/Rent your property" class="estate-card__image">
-                        </div>
-                        <div class="estate-card__caption">Sell/Rent your property</div>
-                    </div>
-
-                    <div class="estate-card">
-                        <div class="estate-card__image-container">
-                            <img src="https://images.pexels.com/photos/209296/pexels-photo-209296.jpeg" alt="Plots/Land"
-                                class="estate-card__image">
-                        </div>
-                        <div class="estate-card__caption">Plots/Land</div>
-                    </div>
-
-                    <div class="estate-card">
-                        <div class="estate-card__image-container">
-                            <span class="estate-card__badge">NEW</span>
-                            <img src="https://images.pexels.com/photos/7648339/pexels-photo-7648339.jpeg"
-                                alt="Explore Insights" class="estate-card__image">
-                        </div>
-                        <div class="estate-card__caption">Explore Insights</div>
-                    </div>
-
-                    <div class="estate-card">
-                        <div class="estate-card__image-container">
-                            <span class="estate-card__badge">NEW</span>
-                            <img src="https://images.pexels.com/photos/439391/pexels-photo-439391.jpeg"
-                                alt="PG & Co-living" class="estate-card__image">
-                        </div>
-                        <div class="estate-card__caption">PG & Co-living</div>
-                    </div>
-
-                    <div class="estate-card">
-                        <div class="estate-card__image-container">
-                            <span class="estate-card__badge">NEW</span>
-                            <img src="https://images.pexels.com/photos/1170412/pexels-photo-1170412.jpeg"
-                                alt="Commercial spaces" class="estate-card__image">
-                        </div>
-                        <div class="estate-card__caption">Commercial spaces</div>
-                    </div>
+                    <div class="estate-card__caption">Buying a home</div>
                 </div>
 
-                <!-- Navigation Arrows -->
-                <button class="estate-slider__arrow estate-slider__arrow--prev" aria-label="Previous slide">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="15 18 9 12 15 6"></polyline>
-                    </svg>
-                </button>
-
-                <button class="estate-slider__arrow estate-slider__arrow--next" aria-label="Next slide">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="9 18 15 12 9 6"></polyline>
-                    </svg>
-                </button>
-            </div <div class="swiper-button-next">
-        </div>
-    </div>
-    </div>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h4>YOUR DREAM HOME AWAITS</h4>
-            <h1>Find Better Places to Live, Work and Wonder...</h1>
-        </div>
-
-        <div class="hero-container">
-            <div class="hero-image">
-                <img src="https://images.pexels.com/photos/1918291/pexels-photo-1918291.jpeg" alt="Modern Living Room">
-            </div>
-            <div class="hero-text">
-                <h5>BUY A HOME</h5>
-                <h2>Find, Buy & Own Your Dream Home</h2>
-                <p>Explore from Apartments, land, builder floors, villas, and more.</p>
-                <button id="exploreBtn">Explore Buying</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Handpicked Projects Section -->
-    <section class="projects">
-        <h2>Handpicked Projects</h2>
-        <p>Featured Properties in Your Area</p>
-
-        <div class="carousel-container">
-            <button class="prev" onclick="scrollLeft()">&#10094;</button>
-
-            <div class="carousel">
-                <div class="card">
-                    <div class="card-image">
-                        <span class="featured">Featured</span>
-                        <img src="https://images.pexels.com/photos/1029599/pexels-photo-1029599.jpeg" alt="Project 1">
-                        <span class="favorite">&#9825;</span>
+                <div class="estate-card">
+                    <div class="estate-card__image-container">
+                        <img src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg"
+                            alt="Renting a home" class="estate-card__image">
                     </div>
-                    <div class="card-info">
-                        
-                        <h3>Riverside Apartments</h3>
-                        <p>3 BHK Apartment, Central District</p>
-                        <span class="price">₹ 1.75 Cr</span>
-                    </div>
+                    <div class="estate-card__caption">Renting a home</div>
                 </div>
 
-                <div class="card">
-                    <div class="card-image">
-                        <span class="featured">Featured</span>
-                        <img src="https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg" alt="Project 2">
-                        <span class="favorite">&#9825;</span>
+                <div class="estate-card">
+                    <div class="estate-card__image-container">
+                        <span class="estate-card__badge">NEW</span>
+                        <img src="https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg"
+                            alt="Invest in Real Estate" class="estate-card__image">
                     </div>
-                    <div class="card-info">
-                        
-                        <h3>Greenfield Villas</h3>
-                        <p>4 BHK Independent House, East Hills</p>
-                        <span class="price">₹ 1.31 - 1.76 Cr</span>
-                    </div>
+                    <div class="estate-card__caption">Invest in Real Estate</div>
                 </div>
 
-                <div class="card">
-                    <div class="card-image">
-                        <span class="featured">Featured</span>
-                        <img src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg" alt="Project 3">
-                        <span class="favorite">&#9825;</span>
+                <div class="estate-card">
+                    <div class="estate-card__image-container">
+                        <img src="https://images.pexels.com/photos/210617/pexels-photo-210617.jpeg"
+                            alt="Sell/Rent your property" class="estate-card__image">
                     </div>
-                    <div class="card-info">
-                       
-                        <h3>Skyview Heights</h3>
-                        <p>2 BHK Apartment, North Square</p>
-                        <span class="price">₹ 1.25 Cr</span>
-                    </div>
+                    <div class="estate-card__caption">Sell/Rent your property</div>
                 </div>
 
-                <div class="card">
-                    <div class="card-image">
-                        <span class="featured">Featured</span>
-                        <img src="https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg" alt="Project 4">
-                        <span class="favorite">&#9825;</span>
+                <div class="estate-card">
+                    <div class="estate-card__image-container">
+                        <img src="https://images.pexels.com/photos/209296/pexels-photo-209296.jpeg" alt="Plots/Land"
+                            class="estate-card__image">
                     </div>
-                    <div class="card-info">
-                        
-                        <h3>Westside Mansions</h3>
-                        <p>5 BHK Villa, Lakeside Boulevard</p>
-                        <span class="price">₹ 2.31 - 2.76 Cr</span>
-                    </div>
+                    <div class="estate-card__caption">Plots/Land</div>
                 </div>
 
-                <div class="card">
-                    <div class="card-image">
-                        <span class="featured">Featured</span>
-                        <img src="https://images.pexels.com/photos/1438832/pexels-photo-1438832.jpeg" alt="Project 5">
-                        <span class="favorite">&#9825;</span>
+                <div class="estate-card">
+                    <div class="estate-card__image-container">
+                        <span class="estate-card__badge">NEW</span>
+                        <img src="https://images.pexels.com/photos/7648339/pexels-photo-7648339.jpeg"
+                            alt="Explore Insights" class="estate-card__image">
                     </div>
-                    <div class="card-info">
-                       
-                        <h3>Downtown Residences</h3>
-                        <p>3 BHK Apartment, City Center</p>
-                        <span class="price">₹ 1.85 Cr</span>
-                    </div>
+                    <div class="estate-card__caption">Explore Insights</div>
                 </div>
 
-                <div class="card">
-                    <div class="card-image">
-                        <span class="featured">Featured</span>
-                        <img src="https://images.pexels.com/photos/2119713/pexels-photo-2119713.jpeg" alt="Project 6">
-                        <span class="favorite">&#9825;</span>
+                <div class="estate-card">
+                    <div class="estate-card__image-container">
+                        <span class="estate-card__badge">NEW</span>
+                        <img src="https://images.pexels.com/photos/439391/pexels-photo-439391.jpeg" alt="PG & Co-living"
+                            class="estate-card__image">
                     </div>
-                    <div class="card-info">
-                        
-                        <h3>Sunset Gardens</h3>
-                        <p>4 BHK Villa, Westside Hills</p>
-                        <span class="price">₹ 2.05 - 2.35 Cr</span>
-                    </div>
+                    <div class="estate-card__caption">PG & Co-living</div>
                 </div>
 
-                <div class="card">
-                    <div class="card-image">
-                        <span class="featured">Featured</span>
-                        <img src="https://images.pexels.com/photos/2079234/pexels-photo-2079234.jpeg" alt="Project 7">
-                        <span class="favorite">&#9825;</span>
+                <div class="estate-card">
+                    <div class="estate-card__image-container">
+                        <span class="estate-card__badge">NEW</span>
+                        <img src="https://images.pexels.com/photos/1170412/pexels-photo-1170412.jpeg"
+                            alt="Commercial spaces" class="estate-card__image">
                     </div>
-                    <div class="card-info">
-                       
-                        <h3>Meadow Residences</h3>
-                        <p>3 BHK Apartment, South Park</p>
-                        <span class="price">₹ 1.65 Cr</span>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-image">
-                        <span class="featured">Featured</span>
-                        <img src="https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg" alt="Project 8">
-                        <span class="favorite">&#9825;</span>
-                    </div>
-                    <div class="card-info">
-                        
-                        <h3>Harbor View Condos</h3>
-                        <p>2 BHK Apartment, Marina District</p>
-                        <span class="price">₹ 1.45 Cr</span>
-                    </div>
+                    <div class="estate-card__caption">Commercial spaces</div>
                 </div>
             </div>
 
-            <button class="next" onclick="scrollRight()">&#10095;</button>
+            <!-- Navigation Arrows -->
+            <button class="estate-slider_arrow estate-slider_arrow--prev" aria-label="Previous slide">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+
+            <button class="estate-slider_arrow estate-slider_arrow--next" aria-label="Next slide">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+        </div <div class="swiper-button-next">
+    </div>
+</div>
+</div>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <h4>YOUR DREAM HOME AWAITS</h4>
+        <h1>Find Better Places to Live, Work and Wonder...</h1>
+    </div>
+
+    <div class="hero-container">
+        <div class="hero-image">
+            <img src="https://images.pexels.com/photos/1918291/pexels-photo-1918291.jpeg" alt="Modern Living Room">
         </div>
-    </section>
-    <script>
-        function scrollLeft() {
-            const carousel = document.querySelector('.carousel');
-            carousel.scrollBy({ left: -340, behavior: 'smooth' });
-        }
+        <div class="hero-text">
+            <h5>BUY A HOME</h5>
+            <h2>Find, Buy & Own Your Dream Home</h2>
+            <p>Explore from Apartments, land, builder floors, villas, and more.</p>
+            <button id="exploreBtn">Explore Buying</button>
+        </div>
+    </div>
+</section>
 
-        function scrollRight() {
-            const carousel = document.querySelector('.carousel');
-            carousel.scrollBy({ left: 340, behavior: 'smooth' });
-        }
+<!-- Handpicked Projects Section -->
+<section class="projects">
+    <h2>Handpicked Projects</h2>
+    <p>Featured Properties in Your Area</p>
 
-        // Optional: Add touch swipe functionality for mobile
-        document.addEventListener('DOMContentLoaded', function () {
-            const carousel = document.querySelector('.carousel');
-            let startX, endX;
+    <div class="carousel-container">
+        <button class="prev" onclick="scrollLeft()">&#10094;</button>
 
-            carousel.addEventListener('touchstart', function (e) {
-                startX = e.touches[0].clientX;
-            });
+        <div class="carousel">
+            <div class="card">
+                <div class="card-image">
+                    <span class="featured">Featured</span>
+                    <img src="https://images.pexels.com/photos/1029599/pexels-photo-1029599.jpeg" alt="Project 1">
+                    <span class="favorite">&#9825;</span>
+                </div>
+                <div class="card-info">
 
-            carousel.addEventListener('touchend', function (e) {
-                endX = e.changedTouches[0].clientX;
+                    <h3>Riverside Apartments</h3>
+                    <p>3 BHK Apartment, Central District</p>
+                    <span class="price">₹ 1.75 Cr</span>
+                </div>
+            </div>
 
-                if (startX - endX > 50) { // Swipe left
-                    scrollRight();
-                } else if (endX - startX > 50) { // Swipe right
-                    scrollLeft();
-                }
-            });
+            <div class="card">
+                <div class="card-image">
+                    <span class="featured">Featured</span>
+                    <img src="https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg" alt="Project 2">
+                    <span class="favorite">&#9825;</span>
+                </div>
+                <div class="card-info">
+
+                    <h3>Greenfield Villas</h3>
+                    <p>4 BHK Independent House, East Hills</p>
+                    <span class="price">₹ 1.31 - 1.76 Cr</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <span class="featured">Featured</span>
+                    <img src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg" alt="Project 3">
+                    <span class="favorite">&#9825;</span>
+                </div>
+                <div class="card-info">
+
+                    <h3>Skyview Heights</h3>
+                    <p>2 BHK Apartment, North Square</p>
+                    <span class="price">₹ 1.25 Cr</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <span class="featured">Featured</span>
+                    <img src="https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg" alt="Project 4">
+                    <span class="favorite">&#9825;</span>
+                </div>
+                <div class="card-info">
+
+                    <h3>Westside Mansions</h3>
+                    <p>5 BHK Villa, Lakeside Boulevard</p>
+                    <span class="price">₹ 2.31 - 2.76 Cr</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <span class="featured">Featured</span>
+                    <img src="https://images.pexels.com/photos/1438832/pexels-photo-1438832.jpeg" alt="Project 5">
+                    <span class="favorite">&#9825;</span>
+                </div>
+                <div class="card-info">
+
+                    <h3>Downtown Residences</h3>
+                    <p>3 BHK Apartment, City Center</p>
+                    <span class="price">₹ 1.85 Cr</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <span class="featured">Featured</span>
+                    <img src="https://images.pexels.com/photos/2119713/pexels-photo-2119713.jpeg" alt="Project 6">
+                    <span class="favorite">&#9825;</span>
+                </div>
+                <div class="card-info">
+
+                    <h3>Sunset Gardens</h3>
+                    <p>4 BHK Villa, Westside Hills</p>
+                    <span class="price">₹ 2.05 - 2.35 Cr</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <span class="featured">Featured</span>
+                    <img src="https://images.pexels.com/photos/2079234/pexels-photo-2079234.jpeg" alt="Project 7">
+                    <span class="favorite">&#9825;</span>
+                </div>
+                <div class="card-info">
+
+                    <h3>Meadow Residences</h3>
+                    <p>3 BHK Apartment, South Park</p>
+                    <span class="price">₹ 1.65 Cr</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <span class="featured">Featured</span>
+                    <img src="https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg" alt="Project 8">
+                    <span class="favorite">&#9825;</span>
+                </div>
+                <div class="card-info">
+
+                    <h3>Harbor View Condos</h3>
+                    <p>2 BHK Apartment, Marina District</p>
+                    <span class="price">₹ 1.45 Cr</span>
+                </div>
+            </div>
+        </div>
+
+        <button class="next" onclick="scrollRight()">&#10095;</button>
+    </div>
+</section>
+<script>
+    function scrollLeft() {
+        const carousel = document.querySelector('.carousel');
+        carousel.scrollBy({ left: -340, behavior: 'smooth' });
+    }
+
+    function scrollRight() {
+        const carousel = document.querySelector('.carousel');
+        carousel.scrollBy({ left: 340, behavior: 'smooth' });
+    }
+
+    // Optional: Add touch swipe functionality for mobile
+    document.addEventListener('DOMContentLoaded', function () {
+        const carousel = document.querySelector('.carousel');
+        let startX, endX;
+
+        carousel.addEventListener('touchstart', function (e) {
+            startX = e.touches[0].clientX;
         });
-    </script>
 
+        carousel.addEventListener('touchend', function (e) {
+            endX = e.changedTouches[0].clientX;
+
+            if (startX - endX > 50) { // Swipe left
+                scrollRight();
+            } else if (endX - startX > 50) { // Swipe right
+                scrollLeft();
+            }
+        });
+    });
+</script>
     <!-- Footer -->
     <div class="footer-container">
         <!-- Subscribe & Social Media -->
         <div class="subscribe-section">
             <div class="subscribe-form">
-                <label for="email">Subscribe to our property alerts</label>
+                <label for="email">Subscribe to our news alerts</label>
                 <div class="form-container">
-                    <input type="email" id="email" placeholder="Email Address">
+                    <input type="email"placeholder="Email Id">
                     <button>Subscribe</button>
                 </div>
             </div>
             <div class="social-icons">
-                <a href="#" target="_blank" aria-label="Facebook">
-                    <i class="fab fa-facebook-f"></i>
+                <a href="https://www.facebook.com/relianceIndustriestLimited" target="_blank" aria-label="Facebook">
+                    <img src="https://rilstaticasset.akamaized.net/sites/default/files/2022-08/facebook-icon.svg"
+                        alt="Facebook">
                 </a>
-                <a href="#" target="_blank" aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
+                <a href="https://www.instagram.com/relianceupdates/" target="_blank" aria-label="Instagram">
+                    <img src="https://rilstaticasset.akamaized.net/sites/default/files/2022-11/insta-icon.svg"
+                        alt="Instagram">
                 </a>
-                <a href="#" target="_blank" aria-label="Twitter">
-                    <i class="fab fa-twitter"></i>
+                <a href="https://twitter.com/RIL" target="_blank" aria-label="Twitter">
+                    <img src="https://rilstaticasset.akamaized.net/sites/default/files/2023-09/twitter-icon%20%281%29.svg"
+                        alt="Twitter">
                 </a>
-                <a href="#" target="_blank" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
+                <a href="https://www.linkedin.com/company/reliance" target="_blank" aria-label="LinkedIn">
+                    <img src="https://rilstaticasset.akamaized.net/sites/default/files/2022-08/linkedin-icon.svg"
+                        alt="LinkedIn">
                 </a>
-                <a href="#" target="_blank" aria-label="YouTube">
-                    <i class="fab fa-youtube"></i>
+                <a href="https://www.youtube.com/user/flameoftruth2014" target="_blank" aria-label="YouTube">
+                    <img src="https://rilstaticasset.akamaized.net/sites/default/files/2022-08/youtube-icon.svg"
+                        alt="YouTube">
                 </a>
             </div>
         </div>
@@ -390,56 +390,38 @@
         <div class="footer-links">
             <div>
                 <h4>About</h4>
-                <a href="#">About Us</a>
-                <a href="#">Our Team</a>
-                <a href="#">Careers</a>
-                <a href="#">Press</a>
+                <a href="about.html">About Us</a>
             </div>
             <div>
-                <h4>Properties</h4>
-                <a href="#">Residential</a>
-                <a href="#">Commercial</a>
-                <a href="#">Plots/Land</a>
-                <a href="#">New Developments</a>
-                <a href="#">Rentals</a>
+                <h4>Businesses</h4>
+                <a class="dropdown-item" href="mart.html">Mart</a>
+                <a class="dropdown-item" href="cafe.html">Cafe</a>
+                <a class="dropdown-item" href="real.html">Real Estate</a>
+                <a class="dropdown-item" href="medical.html">Medical Devices</a>
+                <a class="dropdown-item" href="charity.html">Charity</a>
+                <a class="dropdown-item" href="index.html">Dhammanjali Foundation</a>
             </div>
             <div>
-                <h4>Resources</h4>
-                <a href="#">Buying Guide</a>
-                <a href="#">Selling Guide</a>
-                <a href="#">Investment Tips</a>
-                <a href="#">Market Reports</a>
+                <h4><a href="gallery.html">Gallery</a></h4>
             </div>
             <div>
-                <h4>Get In Touch</h4>
-                <a href="#">Contact Us</a>
-                <a href="#">FAQs</a>
-                <a href="#">Feedback</a>
-                <a href="#">Site Map</a>
+                <h4><a href="testomonials.html">Testimonials</a></h4>
             </div>
-        </div>
-
-        <!-- Footer Logo -->
-        <div class="footer-logo">
-            <a href="#" role="footer-logo">
-                <img src="assets/dhammalogo.png" alt="DreamHome Logo">
-            </a>
         </div>
 
         <!-- Footer Bottom -->
         <div class="footer-bottom">
-            <span>© 2025 DreamHome Real Estate. All rights reserved.</span>
+            <span>© 2025 Reliance Industries Limited. All rights reserved.</span>
             <div>
                 <a href="#">Privacy Policy</a>
-                <a href="#">Terms & Conditions</a>
-                <a href="#">Cookie Policy</a>
+                <a href="#">Legal Notice</a>
+                <a href="#">Report Security Issue</a>
             </div>
         </div>
     </div>
 
-    <!-- JavaScript -->
+    <script src="js/script.js"></script>
     <script>
-        // Navigation Menu
         document.addEventListener('DOMContentLoaded', function () {
             const hamburger = document.querySelector('.hamburger');
             const navMenu = document.querySelector('.nav-menu');
@@ -493,70 +475,50 @@
                     });
                 }
             });
-        });
 
-        // Main Image Slider
-        let slideIndex = 0;
-        const slides = document.querySelectorAll('.slide');
+            // Tab functionality
+            function changeTab(tabId, imageSrc) {
+                // Hide all tab contents
+                document.querySelectorAll('.box-content').forEach(content => {
+                    content.classList.remove('active');
+                });
 
-        function showSlide(n) {
-            slideIndex = n;
-            if (slideIndex >= slides.length) { slideIndex = 0 }
-            if (slideIndex < 0) { slideIndex = slides.length - 1 }
+                // Show selected tab content
+                document.getElementById(tabId).classList.add('active');
 
-            const offset = -slideIndex * 100;
-            document.querySelector('.slider').style.transform = `translateX(${offset}%)`;
-        }
+                // Update tab image
+                document.getElementById('tab-image').src = imageSrc;
 
-        function nextSlide() {
-            showSlide(slideIndex + 1);
-        }
+                // Update active tab
+                document.querySelectorAll('.tab').forEach(tab => {
+                    tab.classList.remove('active');
+                });
+                event.currentTarget.classList.add('active');
+            }
 
-        function prevSlide() {
-            showSlide(slideIndex - 1);
-        }
+            // Make changeTab function available globally
+            window.changeTab = changeTab;
 
-        // Auto slide
-        setInterval(nextSlide, 5000);
+            // Slideshow functionality for foundation section
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.slideshow');
 
-        // Initialize first slide
-        showSlide(0);
+            function showSlide(n) {
+                slides.forEach(slide => {
+                    slide.style.opacity = 0;
+                });
 
-        // Projects Carousel
-        function scrollLeft() {
-            const carousel = document.querySelector('.carousel');
-            carousel.scrollBy({ left: -320, behavior: 'smooth' });
-        }
+                currentSlide = (n + slides.length) % slides.length;
+                slides[currentSlide].style.opacity = 1;
+            }
 
-        function scrollRight() {
-            const carousel = document.querySelector('.carousel');
-            carousel.scrollBy({ left: 320, behavior: 'smooth' });
-        }
+            function nextSlide() {
+                showSlide(currentSlide + 1);
+            }
 
-        // Initialize Swiper
-        document.addEventListener('DOMContentLoaded', function () {
-            const swiper = new Swiper('.swiper-container', {
-                slidesPerView: 2,
-                spaceBetween: 20,
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                breakpoints: {
-                    640: {
-                        slidesPerView: 3,
-                        spaceBetween: 20,
-                    },
-                    768: {
-                        slidesPerView: 4,
-                        spaceBetween: 30,
-                    },
-                    1024: {
-                        slidesPerView: 5,
-                        spaceBetween: 40,
-                    },
-                }
-            });
+            // Start slideshow
+            showSlide(0);
+            setInterval(nextSlide, 3000);
         });
     </script>
 </body>
