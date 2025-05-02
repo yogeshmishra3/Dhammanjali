@@ -785,7 +785,6 @@ body {
     }
 
     .form-container {
-        display: flex;
         border: 1px solid orange;
         border-radius: 4px;
         overflow: hidden;
@@ -1121,7 +1120,7 @@ body {
 }
 
 .form-container {
-    display: flex;
+  
     border: 1px solid orange;
     border-radius: 4px;
     overflow: hidden;

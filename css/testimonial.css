@@ -906,6 +906,22 @@ body {
     }
 }
 
+/* Default style for desktop */
+.responsive-element {
+    width: 10%;
+    /* Other styles you might want */
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+    .responsive-element {
+        width: 15%;
+    }
+}
+
 @media screen and (max-width: 480px) {
     .footer-links {
         grid-template-columns: 1fr;
@@ -930,12 +946,14 @@ body {
     margin: auto;
     padding: 30px 15px;
 }
+
 h1 {
     font-size: 36px;
     text-align: center;
     margin-bottom: 20px;
     color: var(--text-dark);
 }
+
 .testimonial {
     background-color: #f9f9f9;
     border-radius: 8px;
