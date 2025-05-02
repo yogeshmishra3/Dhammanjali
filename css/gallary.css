@@ -307,532 +307,185 @@ body {
     display: none;
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    /* margin: 0 auto; */
-    padding: 0 15px;
-
-    position: relative;
-}
-
-/* Breadcrumb Styles */
-.breadcrumb {
-    background-color: #f9f5e7;
-    padding: 15px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.bread-link ol {
-    display: flex;
-    list-style: none;
-    justify-content: center;
-}
-
-.bread-link li {
-    margin: 0 10px;
-}
-
-.bread-link li:not(:last-child)::after {
-    content: '›';
-    margin-left: 10px;
-    color: #666;
-}
-
-.bread-link a {
-    text-decoration: none;
-    color: var(--secondary-color);
-    transition: color 0.3s ease;
-}
-
-.bread-link a:hover {
-    color: var(--primary-color);
-}
-
-/* Welcome Block Styles */
-.welcome-block {
-    text-align: center;
-    padding: 50px 0;
-    background-color: white;
-}
-
-.section-header h2 {
-    color: var(--primary-color);
-    margin-bottom: 15px;
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-.section-header h3 {
-    font-size: 1.5rem;
-    color: #666;
-    margin-bottom: 25px;
-}
-
-.section-description p {
-    max-width: 800px;
-    margin: 0 auto;
-    color: var(--text-color);
-    font-size: 1.1rem;
-}
-
-/* Company Philosophy Section Styling */
-.company-philosophy {
-    padding: 80px 0;
-    background-color: #f5511f;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
-.content-container {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-    padding: 40px;
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -15px;
-}
-
-.col-md-6 {
-    flex: 0 0 50%;
-    max-width: 50%;
-    padding: 0 15px;
-}
-
-/* For mobile responsiveness */
-@media (max-width: 768px) {
-    .col-md-6 {
-        flex: 0 0 100%;
-        max-width: 100%;
-        margin-bottom: 30px;
-    }
-
-    .col-md-6:last-child {
-        margin-bottom: 0;
-    }
-
-    .content-container {
-        padding: 25px;
-    }
-}
-
-/* Typography */
-.company-philosophy h2 {
-    color: #333;
-    font-size: 28px;
-    margin-bottom: 20px;
-    position: relative;
-    padding-bottom: 15px;
-}
-
-.company-philosophy h2:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 60px;
-    height: 3px;
-    background-color: orange;
-    /* You can change this to your brand color */
-}
-
-.company-philosophy p {
-    color: #555;
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-/* Business Section Styles */
-.our-businesses {
-    padding: 50px 0;
-    background-color: white;
-}
-
-.our-businesses h1 {
-    text-align: center;
-    margin-bottom: 30px;
-    color: var(--secondary-color);
-    font-size: 2.5rem;
-}
-
-.business-container {
+/* Gallery Grid */
+.gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.business-card {
-    position: relative;
-    border-radius: 5px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.business-card:hover {
-    transform: scale(1.05);
-}
-
-.business-card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-}
-
-.business-card .overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
-    color: white;
-    padding: 15px;
-    font-weight: bold;
-}
-
-.explore-btn {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    background-color: transparent;
-    border: 2px solid white;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 50px;
-    transition: all 0.3s ease;
-}
-
-.explore-btn:hover {
-    background-color: white;
-    color: black;
-}
-
-/* Value Creation Styles */
-.value-creation {
-    padding: 50px 0;
-    background-color: #f4f4f4;
-}
-
-.subheading {
-    text-align: center;
-    color: var(--primary-color);
-    text-transform: uppercase;
-    margin-bottom: 10px;
-}
-
-.heading {
-    text-align: center;
-    font-size: 1 rem;
-    margin-bottom: 40px;
-    color: var(--secondary-color);
-}
-
-.value-cards {
-    display: flex;
-    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
-    flex-wrap: wrap;
-    padding: 50px 50px 50px 50px;
-}
-
-.card {
-    background-color: #fff9ef;
-    border-radius: 10px;
-    overflow: hidden;
-    width: 350px;
-    min-height: 460px;
-    /* box-shadow: 0 4px 6px rgba(0,0,0,0.1); */
-    transition: transform 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-}
-
-.card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.card-content {
-    padding: 20px;
-}
-
-.card-content h3 {
-    color: var(--primary-color);
-    margin-bottom: 10px;
-    font-size: 100;
-}
-
-.card-content h2 {
-    color: var(--secondary-color);
-    margin: 10px 0;
-    font-size: 100;
-}
-
-.small-text {
-    color: #666;
-    font-size: 0.5rem;
-}
-
-.highlight {
-    color: var(--primary-color);
-    font-weight: bold;
-}
-
-/* Values Section Styles */
-.values-section {
-    text-align: center;
-    padding: 50px 0;
-    background-color: white;
-}
-
-.values-section h1 {
-    color: var(--secondary-color);
-    margin-bottom: 20px;
-}
-
-.values-section p {
-    max-width: 700px;
-    margin: 0 auto 10px;
-    color: #666;
-}
-
-/* Customer Value Section Styles */
-.customer-value-section {
-    background-color: rgb(8, 8, 185);
-    color: var(--text-color);
-    padding: 5rem 2rem;
-    overflow: hidden;
-}
-
-.content-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    gap: 2rem;
+    padding: 10px;
 }
 
-.side-content {
-    text-align: center;
-    flex: 1;
-    transition: transform var(--transition-speed);
+/* Gallery Items */
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.side-content:hover {
+.gallery-item img:hover {
     transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-.side-content img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 1rem;
-    border: 3px solid white;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transition: transform var(--transition-speed);
+/* Mobile Friendly Padding */
+@media (max-width: 600px) {
+    body {}
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .gallery {
+        gap: 10px;
+    }
 }
 
-.side-content:hover img {
-    transform: scale(1.1);
-}
-
-.side-content p {
-    font-weight: 600;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.main-content {
-    background: linear-gradient(145deg, var(--accent-color), var(--primary-color));
-    color: white;
-    border-radius: 50%;
-    width: 400px;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    padding: 2rem;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-    transition: transform var(--transition-speed);
-}
-
-.main-content:hover {
-    transform: scale(1.02);
-}
-
-.main-content h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.main-content img {
-    width: 80px;
-    margin: 0.5rem 0;
-}
-
-.main-content hr {
-    width: 70px;
-    height: 3px;
-    background-color: white;
-    border: none;
-    margin: 1rem auto;
-    border-radius: 3px;
-}
-
-.main-content p {
-    font-size: 1rem;
-    max-width: 280px;
+.footer-container {
+    background-color: #fff;
+    padding: 40px 20px;
     margin: 0 auto;
-    line-height: 1.5;
 }
 
-.main-content p:last-child {
-    margin-top: 0.5rem;
-    font-style: italic;
-    font-weight: 300;
+.subscribe-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid orange;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
 }
+
+.subscribe-form {
+    width: 100%;
+    max-width: 500px;
+}
+
+.subscribe-form label {
+    font-weight: 600;
+    color: orange;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.form-container {
+    display: flex;
+    border: 1px solid orange;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: #faf8f8;
+}
+
+.subscribe-form input {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    color: orange;
+}
+
+.subscribe-form input::placeholder {
+    color: orange;
+    opacity: 0.7;
+}
+
+.subscribe-form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.subscribe-form button:hover {
+    background-color: #a77c2c;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    background-color: orange;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.social-icons a:hover {
+    background-color: #a77c2c;
+}
+
+.social-icons a img {
+    max-width: 20px;
+    max-height: 20px;
+    filter: brightness(0) invert(1);
+}
+
+
+
 
 /* Responsive Styles */
 @media (max-width: 992px) {
-    .main-content {
-        width: 350px;
-        height: 350px;
+    .col-lg-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
     }
 
-    .side-content img {
-        width: 80px;
-        height: 80px;
+    .contact-details {
+        margin-bottom: 30px;
     }
 }
 
 @media (max-width: 768px) {
-    .content-wrapper {
+    .form-row {
         flex-direction: column;
-        gap: 3rem;
     }
 
-    .main-content {
-        order: 1;
-        width: 320px;
-        height: 320px;
+    .form-group {
+        flex: 0 0 100%;
+        max-width: 100%;
     }
 
-    .side-content.left {
-        order: 0;
+    .section-title {
+        font-size: 28px;
     }
 
-    .side-content.right {
-        order: 2;
+    .office-title,
+    .social-title {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .contact-details,
+    .form-container {
+        padding: 20px;
     }
 
-    .side-content {
+    .submit-btn {
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
     }
 
-    .side-content img {
-        width: 90px;
-        height: 90px;
+    .social-menu {
+        justify-content: center;
     }
 
-    .main-content h2 {
-        font-size: 1.75rem;
+    .section-title {
+        font-size: 24px;
     }
-}
-
-@media (max-width: 480px) {
-    .customer-value-section {
-        padding: 3rem 1rem;
-    }
-
-    .main-content {
-        width: 280px;
-        height: 280px;
-        padding: 1.5rem;
-    }
-
-    .main-content h2 {
-        font-size: 1.5rem;
-    }
-
-    .main-content p {
-        font-size: 0.9rem;
-        max-width: 220px;
-    }
-
-    .main-content img {
-        width: 60px;
-    }
-
-    .side-content p {
-        font-size: 1rem;
-    }
-}
-
-/* Awards Section Styles */
-.awards-section {
-    background-color: orange;
-    padding: 50px 0;
-}
-
-.awards-section h2 {
-    color: white;
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 2rem;
-}
-
-.awards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
-
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.award-card {
-    /* background-color: white; */
-    border-radius: 10px;
-    /* padding: 20px; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* box-shadow: 0 4px 6px rgba(0,0,0,0.2); */
-    transition: transform 0.3s ease;
-}
-
-.award-card:hover {
-    transform: scale(1.05);
-}
-
-.award-card img {
-    max-width: 80%;
-    height: auto;
 }
 
 

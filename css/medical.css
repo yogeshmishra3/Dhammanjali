@@ -124,6 +124,7 @@ body {
     visibility: hidden;
     transition: all 0.3s ease;
     z-index: 100;
+    list-style: none;
 }
 
 .dropdown:hover .dropdown-menu {

@@ -125,6 +125,7 @@ body {
     position: absolute;
     top: 130%;
     left: 50%;
+    list-style: none;
     transform: translateX(-50%);
     min-width: 200px;
     background-color: var(--white);
@@ -146,6 +147,7 @@ body {
 .dropdown-item {
     display: flex;
     align-items: center;
+
     padding: 10px 15px;
     color: var(--text-dark);
     text-decoration: none;
@@ -714,4 +716,3 @@ body {
     .testimonial-text p {
         font-size: 1rem;
     }
-
