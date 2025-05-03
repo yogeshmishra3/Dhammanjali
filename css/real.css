@@ -357,7 +357,7 @@ body {
 @media (max-width: 480px) {
     .slide {
         height: 40vh;
-        /* Even smaller height for very small screens */
+        margin-top: 7pc;
     }
 
     .buttons button {

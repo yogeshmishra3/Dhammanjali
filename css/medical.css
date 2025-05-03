@@ -26,6 +26,8 @@ body {
 
 /* Navbar */
 .navbar {
+    position: fixed;
+    z-index: 1000;
     width: 100%;
     background-color: var(--white);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);

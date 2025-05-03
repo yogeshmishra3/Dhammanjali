@@ -36,7 +36,7 @@ body {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 10px 15px;
+    padding: 15px 20px;
 }
 
 /* Logo */
@@ -47,7 +47,6 @@ body {
 
 .logo img {
     height: 80px;
-
 }
 
 /* Navigation menu */
@@ -957,13 +956,14 @@ p {
 }
 
 .agm-highlight {
+    display: flex;
     background-color: orange;
     color: white;
     text-align: left;
     padding: 40px 20px;
-    display: flex;
     flex-direction: column;
     font-family: "jioType", sans-serif;
+    position: relative;
 }
 
 .agm-highlight h2 {
@@ -971,6 +971,43 @@ p {
     margin: 0;
     padding-bottom: 30px;
     padding-left: 5%;
+    max-width: 80%;
+}
+
+.download-btn {
+    align-self: flex-start;
+    margin-left: 5%;
+    padding: 10px 20px;
+    background-color: white;
+    color: orange;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #f1f1f1;
+}
+
+/* Media query for desktop screens */
+@media screen and (min-width: 768px) {
+    .agm-highlight {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .agm-highlight h2 {
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+
+    .download-btn {
+        margin-left: 0;
+        margin-right: 5%;
+    }
 }
 
 /* Responsive Breakpoints */
