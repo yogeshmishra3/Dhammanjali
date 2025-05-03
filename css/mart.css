@@ -319,28 +319,40 @@ body {
 
 .fullscreen-bg {
     width: 100%;
-    height: 90vh;
+    height: 100vh;
+    /* Using viewport height instead of fixed percentage */
+    position: relative;
+    /* Added position relative for proper containment */
+    overflow: hidden;
+    /* Prevent scrollbars from appearing */
 }
 
 /* Image Styling */
 .fullscreen-bg img {
     width: 100%;
-    height: 80%;
+    height: 100%;
     object-fit: cover;
+    /* Maintain aspect ratio while covering container */
+    display: block;
+    /* Removes any extra space beneath image */
+    position: absolute;
+    /* Position absolute inside the container */
+    top: 0;
+    left: 0;
 }
 
+/* Slider container styling if needed */
 .slider-container {
-    width: 80%;
-    overflow: hidden;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
+/* Media Queries */
 @media (max-width: 1024px) {
     .fullscreen-bg {
-        height: 75vh;
-    }
-
-    .fullscreen-bg img {
-        height: 70vh;
+        height: 80vh;
+        /* Slightly reduced height for tablets */
     }
 
     .slider-container {
@@ -351,10 +363,7 @@ body {
 @media (max-width: 768px) {
     .fullscreen-bg {
         height: 60vh;
-    }
-
-    .fullscreen-bg img {
-        height: 55vh;
+        /* Further reduced for smaller tablets */
     }
 
     .slider-container {
@@ -365,16 +374,25 @@ body {
 @media (max-width: 480px) {
     .fullscreen-bg {
         height: 50vh;
+        /* Mobile height */
     }
 
+    /* Ensure image covers the container properly on mobile */
     .fullscreen-bg img {
-        height: 45vh;
-    }
-
-    .slider-container {
+        height: 100%;
         width: 100%;
     }
 }
+
+.slider-container {
+    width: 80%;
+    overflow: hidden;
+}
+
+
+
+
+
 
 .swiper {
     width: 100%;
@@ -871,7 +889,7 @@ body {
 .tagline-section {
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     padding: 50px 0;
- 
+
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
