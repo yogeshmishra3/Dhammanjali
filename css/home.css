@@ -47,8 +47,7 @@ body {
 
 .logo img {
     height: 80px;
-    margin: 0;
-    padding: 0;
+
 }
 
 /* Navigation menu */
@@ -400,9 +399,6 @@ body {
     }
 }
 
-.logo img {
-    height: 60px;
-}
 
 /* we care */
 .we-care-section {
