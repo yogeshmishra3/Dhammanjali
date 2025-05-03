@@ -398,6 +398,10 @@ body {
     }
 }
 
+.logo img {
+    height: 60px;
+}
+
 /* we care */
 .we-care-section {
     padding: 50px 20px;
