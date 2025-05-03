@@ -319,7 +319,8 @@ body {
 
 .fullscreen-bg {
     width: 100%;
-    height: 100vh;
+    height: 70vh;
+    object-fit: cover;
     /* Using viewport height instead of fixed percentage */
     position: relative;
     /* Added position relative for proper containment */
@@ -334,10 +335,10 @@ body {
     object-fit: cover;
     /* Maintain aspect ratio while covering container */
     display: block;
+    margin-top: 90px;
     /* Removes any extra space beneath image */
     position: absolute;
-    /* Position absolute inside the container */
-    top: 0;
+
     left: 0;
 }
 
