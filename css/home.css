@@ -731,6 +731,26 @@ p {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Responsive styles */
+@media (max-width: 768px) {
+    .announcement-container {
+        display: block;
+    }
+
+    .announcement-image {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .announcement-container {
+        padding: 15px;
+    }
+}
+
 /* Left Content */
 .announcement-content {
     flex: 1;
@@ -776,57 +796,19 @@ p {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Announcements Section */
-.announcements {
-    max-width: 1200px;
-    margin: 50px auto;
-    padding: 20px;
-}
-
-/* Grid Layout */
-.announcement-grid {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-/* Individual Card */
-.announcement-card {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    flex: 1;
-    transition: transform 0.3s;
-}
-
-.announcement-card:hover {
-    transform: translateY(-5px);
-}
-
-/* Logo Styling */
-.announcement-logo {
-    max-width: 250px;
-    margin-bottom: 15px;
-}
-
-/* Multiple Logos */
-.multiple-logos img {
-    max-width: 250px;
-    margin: 0 10px;
-}
-
-/* Announcement section styles */
+/* Unified Announcements Section */
+.announcements,
 .dhm-announcements {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 50px auto;
     padding: 20px;
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Unified Grid Layout */
+.announcement-grid,
 .dhm-announcement-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -834,58 +816,38 @@ p {
     margin-bottom: 30px;
 }
 
+/* Individual Card */
+.announcement-card,
 .dhm-announcement-item {
-    background-color: #ffffff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     height: 100%;
     display: flex;
     flex-direction: column;
 }
 
+.announcement-card:hover,
 .dhm-announcement-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
+/* Logo Styling */
+.announcement-logo,
 .dhm-announcement-logo {
+    max-width: 100%;
     height: 180px;
-    width: 100%;
     object-fit: cover;
+    margin-bottom: 15px;
     border-bottom: 1px solid #eaeaea;
 }
 
-.dhm-announcement-content {
-    padding: 16px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.dhm-announcement-title {
-    font-size: 18px;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 12px;
-}
-
-.dhm-announcement-meta {
-    font-size: 12px;
-    color: #666;
-    margin-top: auto;
-}
-
-.dhm-author {
-    font-weight: 600;
-    color: #444;
-}
-
-.dhm-date {
-    color: #777;
-}
-
+/* Multiple Logos */
+.multiple-logos,
 .dhm-logos-container {
     height: 180px;
     display: flex;
@@ -894,16 +856,59 @@ p {
     background-color: #f9f9f9;
 }
 
+.multiple-logos img,
 .dhm-logos-container img {
     max-height: 100px;
     max-width: 80%;
     object-fit: contain;
+    margin: 0 10px;
 }
 
+/* Announcement Content */
+.dhm-announcement-content {
+    padding: 16px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Title Styling */
+.dhm-announcement-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+/* Unified Meta Information */
+.announcement-meta,
+.dhm-announcement-meta {
+    font-size: 14px;
+    color: #666;
+    margin-top: auto;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+.author,
+.dhm-author {
+    font-weight: 600;
+    color: #003893;
+}
+
+.date,
+.dhm-date {
+    color: #003893;
+}
+
+/* More Announcements Button Styling */
+.more-announcements,
 .dhm-more-announcements {
+    margin-top: 20px;
     text-align: center;
 }
 
+.more-announcements button,
 .dhm-more-button {
     background-color: #3498db;
     color: white;
@@ -913,108 +918,30 @@ p {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: auto;
 }
 
+.more-announcements button:hover,
 .dhm-more-button:hover {
     background-color: #2980b9;
 }
 
-/* Responsive styles */
-@media (max-width: 992px) {
-    .dhm-announcement-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .dhm-announcement-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .dhm-announcement-title {
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 480px) {
-    .dhm-announcements {
-        padding: 15px 10px;
-    }
-
-    .dhm-announcement-item {
-        margin-bottom: 15px;
-    }
-
-    .dhm-announcement-logo {
-        height: 150px;
-    }
-
-    .dhm-announcement-content {
-        padding: 12px;
-    }
-
-    .dhm-more-button {
-        padding: 10px 20px;
-        font-size: 14px;
-        width: 100%;
-    }
-}
-
-/* Announcement Meta */
-.announcement-meta {
-    font-size: 14px;
-    color: gray;
-    margin-top: 10px;
-    border-top: 1px solid #ddd;
-    padding-top: 10px;
-}
-
-.author {
-    color: #003893;
-    font-weight: bold;
-}
-
-.date {
-    color: #003893;
-}
-
-/* More Announcements Button */
-.more-announcements {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.more-announcements button {
-    background: white;
-    border: 1px solid #ccc;
-    padding: 10px 20px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 18px;
-    transition: all 0.3s;
-}
-
-.more-announcements button:hover {
-    background: #eee;
-    border-color: #999;
-}
-
-/* banner */
+/* Banner Styling */
 .agm-banner {
     display: flex;
     justify-content: center;
     align-items: center;
-    justify-items: center;
     width: 100%;
     max-width: 100%;
     overflow: hidden;
-    padding: 60px;
+    padding: 5%;
     background-color: #fdf2df;
 }
 
 .agm-image {
     width: 90%;
     height: auto;
+    max-width: 100%;
     object-fit: cover;
 }
 
@@ -1022,18 +949,109 @@ p {
     background-color: orange;
     color: white;
     text-align: left;
-    padding: 40px 40px;
-    justify-content: space-between;
-    align-items: center;
-    font-family: "jioType";
+    padding: 40px 20px;
     display: flex;
+    flex-direction: column;
+    font-family: "jioType", sans-serif;
 }
 
 .agm-highlight h2 {
-    font-size: 22px;
+    font-size: clamp(16px, 5vw, 22px);
     margin: 0;
     padding-bottom: 30px;
-    padding-left: 50px;
+    padding-left: 5%;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1200px) {
+
+    .announcements,
+    .dhm-announcements {
+        margin: 30px 15px;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .announcement-grid,
+    .dhm-announcement-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .agm-highlight {
+        padding: 30px 15px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .announcement-grid,
+    .dhm-announcement-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dhm-announcement-title,
+    .announcement-card h3 {
+        font-size: 16px;
+    }
+
+    .multiple-logos,
+    .dhm-logos-container {
+        height: 150px;
+    }
+
+    .agm-banner {
+        padding: 30px 15px;
+        flex-direction: column;
+    }
+
+    .agm-highlight {
+        flex-direction: column;
+    }
+
+    .agm-highlight h2 {
+        padding-left: 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .announcements,
+    .dhm-announcements {
+        padding: 15px 10px;
+    }
+
+    .announcement-logo,
+    .dhm-announcement-logo,
+    .multiple-logos,
+    .dhm-logos-container {
+        height: 130px;
+    }
+
+    .announcement-card,
+    .dhm-announcement-item {
+        padding: 15px;
+    }
+
+    .dhm-announcement-content {
+        padding: 12px;
+    }
+
+    .more-announcements button,
+    .dhm-more-button {
+        padding: 10px 20px;
+        font-size: 14px;
+        width: 100%;
+    }
+
+    .agm-banner {
+        padding: 20px 10px;
+    }
+
+    .agm-highlight {
+        padding: 20px 10px;
+    }
 }
 
 .download-btn {

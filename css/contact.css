@@ -1105,13 +1105,15 @@ body {
     width: 100%;
     max-width: 500px;
 }
- .form-container-footer {
-     display: flex;
-     border: 1px solid orange;
-     border-radius: 4px;
-     overflow: hidden;
-     background-color: #faf8f8;
- }
+
+.form-container-footer {
+    display: flex;
+    border: 1px solid orange;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: #faf8f8;
+}
+
 .subscribe-form label {
     font-weight: 600;
     color: orange;
@@ -1120,7 +1122,7 @@ body {
 }
 
 .form-container {
-  
+
     border: 1px solid orange;
     border-radius: 4px;
     overflow: hidden;
