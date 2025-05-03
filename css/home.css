@@ -248,6 +248,10 @@ body {
         display: none;
     }
 
+    .logo img {
+        height: 60px;
+    }
+
     /* Mobile dropdown styles */
     .dropdown-menu {
         position: static;
@@ -300,6 +304,11 @@ body {
     .mobile-account {
         display: block;
     }
+}
+
+/* Hide by default */
+.mobile-account {
+    display: none;
 }
 
 /* Hero Section */
