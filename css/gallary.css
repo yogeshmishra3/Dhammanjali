@@ -750,11 +750,11 @@ body {
 
     .nav-menu {
         position: fixed;
-        top: 110px;
         /* Adjust based on your navbar height */
         left: -100%;
         width: 100%;
-        height: calc(100vh - 110px);
+        height: calc(110vh);
+        padding-top: 80px;
         flex-direction: column;
         background-color: var(--white);
         text-align: center;
@@ -767,6 +767,7 @@ body {
 
     .nav-menu.active {
         left: 0;
+        padding-top: 80px;
     }
 
     .nav-item {

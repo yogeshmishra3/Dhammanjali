@@ -228,9 +228,6 @@ body {
         z-index: 999;
     }
 
-    .nav-menu.active {
-        left: 0;
-    }
 
     .nav-item {
         margin: 15px 0;
@@ -1074,17 +1071,7 @@ body {
     /* Push to the right side */
 }
 
-/* Adjust nav container layout */
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 15px 20px;
-    position: relative;
-    /* For proper positioning of elements */
-}
+
 
 /* Account button positioning */
 .desktop-account {
@@ -1134,7 +1121,11 @@ body {
     }
 
     .nav-menu.active {
+
         left: 0;
+        padding-top: 80px;
+        top: 0;
+        height: 100vh;
     }
 
     .nav-item {
