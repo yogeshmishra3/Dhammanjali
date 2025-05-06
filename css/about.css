@@ -1385,3 +1385,29 @@ body {
         margin-top: 10px;
     }
 }
+
+/* Description paragraph styling */
+.description-about {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    text-align: justify;
+    max-width: 1400px;
+    margin: 0 auto 20px;
+    padding: 0 15px;
+}
+
+/* Company name styling within description */
+.description-about .company-name {
+    font-weight: 700;
+    color: #2c5282;
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+    .description-about {
+        font-size: 1rem;
+        text-align: left;
+    }
+}
